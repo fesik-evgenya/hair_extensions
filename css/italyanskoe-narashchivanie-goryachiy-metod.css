@@ -197,6 +197,39 @@ ul, ol, li {
     text-align: justify;
 }
 
+.wave-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.wave-up {
+    position: absolute;
+    width: 1200px;
+    height: 167px;
+    left: 183px;
+    top: 146px;
+    filter: drop-shadow(0px 4px 12px #B8A12E);
+    z-index: 1;
+}
+
+.wave-bottom {
+    position: absolute;
+    width: 1201px;
+    height: 154px;
+    left: 161px;
+    top: 512px;
+    opacity: 0.7;
+    filter: drop-shadow(0px 4px 15px #B8A12E);
+    z-index: 1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 .content__info {
     display: flex;
     justify-content: center;
@@ -220,6 +253,7 @@ ul, ol, li {
     box-shadow: 0 4px 12px 10px rgba(212, 175, 55, 0.2);
     border-radius: 16px;
     align-items: flex-start;
+    z-index: 1000;
 }
 
 .content__info-text-p {
