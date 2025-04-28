@@ -36,6 +36,11 @@ body {
     line-height: 1.4;
 }
 
+b {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+}
+
 h1, h2, h3 {
     font-family: 'Playfair Display', Georgia, serif;
     margin: 0;
@@ -57,6 +62,11 @@ ul, ol, li {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+strong {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
 }
 
 .container {
@@ -297,19 +307,20 @@ ul, ol, li {
 .content__info-list-item {
     color: #E0E0E0;
     font-family: 'Montserrat', Arial, sans-serif;
-    height: 80px;
+    height: 90px;
+    width: 300px;
     font-weight: 300;
     font-size: 18px;
     line-height: 20px;
     list-style: none;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 .content__info-list-item li {
     color: #FFFFFF;
     position: relative;
     width: 700px;
-    padding-left: 15px;
+    padding-left: 25px;
     padding-bottom: 5px;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 300;
@@ -318,12 +329,12 @@ ul, ol, li {
 }
 
 .content__info-list-item li::before {
-    content: "•";
+    content: "✔";
     position: absolute;
     left: 0;
     font-size: 16px;
     line-height: 20px;
-    color: #E0E0E0;
+    color: #C0A040;
 }
 
 .content__info-list-item p {
@@ -342,7 +353,7 @@ ul, ol, li {
     justify-content: left;
     width: 702px;
     gap: 75px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .content__info-text-price div {
@@ -375,11 +386,6 @@ ul, ol, li {
     font-size: 9px;
     line-height: 20px;
     color: #E0E0E0;
-}
-
-.bold {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 600;
 }
 
 .content__info-text-sale {

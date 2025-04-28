@@ -29,12 +29,18 @@ a:hover {
     text-decoration: underline;
 }
 
+b {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+}
+
 body {
     background-color: #000000;
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
     line-height: 1.4;
 }
+
 
 h1, h2, h3 {
     font-family: 'Playfair Display', Georgia, serif;
@@ -51,6 +57,11 @@ header {
     z-index: 100;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
+}
+
+strong {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
 }
 
 ul, ol, li {
@@ -266,7 +277,6 @@ ul, ol, li {
     width: 710px;
     height: 115px;
     font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 300;
     font-size: 18px;
     line-height: 20px;
     text-align: justify;
@@ -297,19 +307,20 @@ ul, ol, li {
 .content__info-list-item {
     color: #E0E0E0;
     font-family: 'Montserrat', Arial, sans-serif;
-    height: 80px;
+    height: 90px;
+    width: 300px;
     font-weight: 300;
     font-size: 18px;
     line-height: 20px;
     list-style: none;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 .content__info-list-item li {
     color: #FFFFFF;
     position: relative;
     width: 700px;
-    padding-left: 15px;
+    padding-left: 25px;
     padding-bottom: 5px;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 300;
@@ -318,12 +329,12 @@ ul, ol, li {
 }
 
 .content__info-list-item li::before {
-    content: "•";
+    content: "✔";
     position: absolute;
     left: 0;
     font-size: 16px;
     line-height: 20px;
-    color: #E0E0E0;
+    color: #C0A040;
 }
 
 .content__info-list-item p {
@@ -339,10 +350,11 @@ ul, ol, li {
 
 .content__info-text-price {
     display: flex;
+    flex-direction: column;
     justify-content: left;
-    width: 702px;
-    gap: 75px;
-    margin-top: 100px;
+    width: 750px;
+    gap: 10px;
+    margin-top: 30px;
 }
 
 .content__info-text-price div {
@@ -364,7 +376,7 @@ ul, ol, li {
 
 .content__info-text-price li {
     position: relative;
-    width: 500px;
+    width: 710px;
     padding-left: 15px;
 }
 
@@ -375,11 +387,6 @@ ul, ol, li {
     font-size: 9px;
     line-height: 20px;
     color: #E0E0E0;
-}
-
-.bold {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 600;
 }
 
 .content__info-text-sale {
@@ -406,6 +413,11 @@ ul, ol, li {
     width: 18px;
     height: 18px;
     animation: fire-effect 1.5s infinite alternate ease-in-out;
+}
+
+strong {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
 }
 
 @keyframes fire-effect {
