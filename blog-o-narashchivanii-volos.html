@@ -23,8 +23,10 @@
     <meta property="og:url" content="https://hairlong.ru/blog-o-narashchivanii-volos.html">
     <meta property="og:image" content="https://hairlong.ru/images/preview.jpg">
     <meta property="og:site_name" content="Мастер наращивания волос Виктория">
-    <!-- Основной CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/blog-o-narashchivanii-volos.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <!-- Шрифты -->
     <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2"
           crossorigin>
@@ -43,26 +45,10 @@
     <meta name="geo.placename" content="Rostov-on-Don">
 </head>
 <body>
-<header>
-    <div class="header">
-        <div class="container">
-            <div class="logo"><img src="/images/Logo.svg"
-                                   alt="Виктория — профессиональное наращивание волос в Ростове-на-Дону"></div>
-            <nav class="menu">
-                <ul class="menu-list">
-                    <li class="menu-item"><a href="index.html" class="menu-item">Главная</a></li>
-                    <li class="menu-item"><a href="uslugi-narashchivaniya-volos.html" class="menu-item">Услуги</a></li>
-                    <li class="menu-item"><a href="#" class="menu-item">Портфолио</a></li>
-                    <li class="menu-item"><a href="#" class="menu-item">Цены</a></li>
-                    <li class="menu-item"><a href="#" class="menu-item">О мастере</a></li>
-                    <li class="menu-item"><a href="blog-o-narashchivanii-volos.html" class="menu-item">Блог</a></li>
-                    <li class="menu-item"><a href="#" class="menu-item">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="btn"><a href="#" class="booking">Записаться</a></div>
-        </div>
-    </div>
-</header>
+<div id="header-container">
+    <div class="loading-spinner"></div>
+</div>
+
 <nav class="breadcrumbs" aria-label="Навигация по разделам">
     <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
@@ -86,20 +72,21 @@
             <h2>Уход за нарощенными волосами: советы мастера</h2>
             <p>Как ухаживать за нарощенными волосами? Советы мастера наращивания волос в Ростове-на-Дону: правильное
                 мытьё, расчёсывание, укладка и коррекция.</p>
-            <div class="btn_black"><a href="#">Читать далее</a></div>
+            <div class="btn_black"><a href="uhod-za-naroshchennimi-volosami-soveti-mastera.html">Читать далее</a></div>
         </div>
         <div class="content__card">
             <img src="images/colors.jpg" alt="капсульное наращивание волос">
             <h2>Капсульное наращивание волос: преимущества и недостатки </h2>
             <p>Узнайте все плюсы и минусы метода и как сохранить результат до 4 месяцев.
                 Внутри специальное предложение для новых клиентов в Ростове-на-Дону!</p>
-            <div class="btn_black"><a href="#">Читать далее</a></div>
+            <div class="btn_black"><a href="kapsulnoe-narashchivanie-volos-preimushchestva-i-nedostatki.html">Читать
+                далее</a></div>
         </div>
         <div class="content__card">
             <img src="images/long_hair_6_mistakes.png" alt="ошибки после наращивания волос">
             <h2>6 главных ошибок после наращивания волос: что портит результат и как избежать</h2>
             <p>Секрет идеальных волос после наращивания: 6 фатальных ошибок, которые совершают 9 из 10 девушек!</p>
-            <div class="btn_black"><a href="#">Читать далее</a></div>
+            <div class="btn_black"><a href="shest-oshibok-posle-narashchivaniya-volos.html">Читать далее</a></div>
         </div>
     </div>
 </section>
@@ -222,59 +209,13 @@
         </div>
     </div>
 </section>
-<footer class="footer">
-    <img src="/images/divider.png" alt="разделитель" class="footer__divider">
-    <div class="footer__content">
-        <div class="footer__brand">
-            <img src="images/Logo_Gold_vector.svg" alt="Виктория — профессиональное наращивание волос в Ростове-на-Дону"
-                 loading="lazy" width="120" height="152">
-            <p class="footer__slogan">Длина. Густота. Совершенство.</p>
-        </div>
 
-        <nav class="footer__nav">
-            <div class="footer__section">
-                <h3 class="footer__heading">Меню</h3>
-                <ul class="footer__links">
-                    <li><a href="uslugi-narashchivaniya-volos.html">Услуги</a></li>
-                    <li><a href="index.html#reviews">Отзывы</a></li>
-                    <li><a href="blog-o-narashchivanii-volos.html#faq">FAQ</a></li>
-                </ul>
-            </div>
+<div id="footer-container">
+    <div class="loading-spinner"></div>
+</div>
 
-            <div class="footer__section">
-                <h3 class="footer__heading">Контакты</h3>
-                <address class="footer__contacts">
-                    <a href="tel:+79913676565" class="footer__contact">
-                        <img src="/images/phone_icon.png" alt="" loading="lazy" width="16" height="16">
-                        +7 (991) 367-65-65
-                    </a>
-                    <a href="mailto:my-longhair@mail.ru" class="footer__contact">
-                        <img src="/images/mail_icon.png" alt="" loading="lazy" width="16" height="12">
-                        my-longhair@mail.ru
-                    </a>
-                </address>
-            </div>
-
-            <div class="footer__section">
-                <h3 class="footer__heading">Соцсети</h3>
-                <div class="footer__social">
-                    <a href="#" aria-label="Telegram"><img src="images/icon_telegram.png" alt="" loading="lazy"
-                                                           width="24" height="24"></a>
-                    <a href="#" aria-label="ВКонтакте"><img src="images/icon_VK.png" alt="" loading="lazy" width="24"
-                                                            height="24"></a>
-                    <a href="#" aria-label="WhatsApp"><img src="images/icon_WhatUP.png" alt="" loading="lazy" width="24"
-                                                           height="24"></a>
-                    <a href="#" aria-label="Instagram"><img src="images/icon_Instagram.png" alt="" loading="lazy"
-                                                            width="24" height="24"></a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="footer__afterword">
-        <a href="#" class="footer_afterword-author">© 2025 design and develop by Fesik. </a>
-        <span class="footer_afterword-rights"> Все права защищены.</span>
-    </div>
-</footer>
 <script src="js/accordion.js"></script>
+<script src="/js/menu-loader.js" defer></script>
+<script src="/js/footer-loader.js" defer></script>
 </body>
 </html>

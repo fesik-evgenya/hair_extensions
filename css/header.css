@@ -1,0 +1,103 @@
+header {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+ul, ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    gap: 30px;
+    margin-top: 11px;
+}
+
+.logo {
+    width: 30px;
+    height: 38px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-right: 50px;
+}
+
+.menu-item {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    color: #C0A040;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.btn {
+    background-color: #C0A040;
+    border-radius: 10px;
+    border: none;
+    width: 130px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 4px rgba(192, 160, 64, 0.2);
+}
+
+.btn:hover {
+    background: #D4B352; /* На 10% светлее при наведении */
+    transform: translateY(-3px); /* Эффект "поднятия" */
+    box-shadow: 0 4px 12px rgba(192, 160, 64, 0.3); /* Усиленная тень */
+}
+
+.btn:active {
+    transform: translateY(1px); /* Эффект нажатия */
+    box-shadow: 0 1px 2px rgba(192, 160, 64, 0.3); /* Уменьшенная тень */
+}
+
+.booking {
+    color: #000000;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.booking:hover {
+    text-decoration: none;
+}
+
+.loading-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #C0A040;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
