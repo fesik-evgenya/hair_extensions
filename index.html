@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/social-buttons.css">
     <!-- Шрифты -->
     <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff" as="font" type="font/woff" crossorigin>
@@ -44,8 +45,28 @@
 </div>
 
 <section class="hero">
-    <img src="/images/Hero_block-pic.svg" alt="Профессиональное наращивание волос в Ростове-на-Дону" class="hero-pic">
+    <div class="hero__content">
+        <!-- Слоган-триада -->
+        <div class="hero__slogan">
+            <h1 class="hero__slogan-line">
+                <span class="hero__slogan-word">Длина.</span>
+                <span class="hero__slogan-word">Густота.</span>
+                <span class="hero__slogan-word">Совершенство.</span>
+            </h1>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="hero__text-group">
+            <h2 class="hero__title">Ваша новая роскошь<br>за <span class="hero__highlight">3 часа</span></h2>
+            <p class="hero__subtitle">
+                <span class="hero__guarantee-badge">Гарантия 4 недели</span>
+                <span class="hero__guarantee-badge">98% клиентов возвращаются снова</span>
+            </p>
+        </div>
+    </div>
+    <img src="/images/Hero_block-pic.svg" alt="Наращивание волос" class="hero__pic">
 </section>
+
 <section class="waves">
     <div class="img-wave"><img src="/images/Wave_up.svg" alt="золотые волны нарощенных волос" class="img-wave"></div>
     <div class="advantages">
@@ -94,13 +115,13 @@
     </div>
     <div class="img-wave"><img src="/images/Wave_bottom.svg" alt="золотые волны нарощенных волос" class="img-wave">
     </div>
-    <div class="reviews" id="reviews">
+    <div class="reviews">
         <div class="waves_reviews-title"><h2>ОТЗЫВЫ</h2></div>
         <div class="waves_reviews-hashtags">
             <span class="waves_reviews-hashtag">#LongHairMagic</span>
             <span class="waves_reviews-hashtag">#НаращиваниеОтПрофи</span>
         </div>
-        <div class="waves_reviews-cards">
+        <div class="waves_reviews-cards" id="reviews">
             <div class="waves_reviews-card">
                 <div class="waves_reviews-card-contact">
                     <div class="waves_reviews-card-avatar"><img src="images/avatars/1.jpg"
@@ -167,7 +188,9 @@
     <div class="loading-spinner"></div>
 </div>
 
-<script src="/js/footer-loader.js" defer></script>
+<script src="/js/social-buttons.js" defer></script>
 <script src="/js/menu-loader.js" defer></script>
+<script src="/js/footer-loader.js" defer></script>
+
 </body>
 </html>

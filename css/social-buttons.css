@@ -1,0 +1,94 @@
+/* Основной контейнер */
+.social-container {
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    z-index: 999;
+    padding: 20px 15px;
+    background: rgba(0, 0, 0, 0.2); /* Полупрозрачный чёрный фон */
+    border-radius: 40px;
+    backdrop-filter: blur(2px); /* Размытие фона под контейнером */
+    border: 1px solid rgba(192, 160, 64, 0.5); /* Тонкая золотая обводка */
+    box-shadow:
+            0 0 15px rgba(192, 160, 64, 0.3), /* Внешнее свечение */
+            inset 0 0 10px rgba(192, 160, 64, 0.2); /* Внутренняя подсветка */
+    transition: all 0.4s ease;
+}
+
+/* Контейнер иконок */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Стили иконок */
+.social-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    filter: drop-shadow(0 0 8px rgba(192, 160, 64, 0.4));
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+/* Эффекты свечения */
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(
+            circle at 50% 50%,
+            rgba(192, 160, 64, 0.5) 0%,
+            rgba(192, 160, 64, 0.2) 50%,
+            transparent 100%
+    );
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: glowPulse 2.5s infinite;
+    z-index: 1;
+}
+
+/* Анимации */
+@keyframes glowPulse {
+    0% { transform: scale(0.7); opacity: 0.5; }
+    50% { transform: scale(0.9); opacity: 0.9; }
+    100% { transform: scale(0.7); opacity: 0.5; }
+}
+
+/* Ховер-эффекты */
+.social-container:hover {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow:
+            0 0 25px rgba(192, 160, 64, 0.5),
+            inset 0 0 15px rgba(192, 160, 64, 0.3);
+    border-color: rgba(192, 160, 64, 0.7);
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 15px rgba(224, 184, 80, 0.8));
+}
+
+.social-icon:hover::before {
+    animation:
+            glowPulse 1s infinite,
+            strongGlow 1.2s alternate infinite;
+}
+
+@keyframes strongGlow {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}

@@ -1,0 +1,334 @@
+/* ==================== ШРИФТЫ ==================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2'),
+    url('/fonts/Montserrat/Montserrat-VariableFont_wght.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('/fonts/Playfair_Display/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== БАЗОВЫЕ СТИЛИ ==================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: #E0E0E0;
+    margin: 0;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== ВОЛНЫ НА ФОНЕ ==================== */
+.wave-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.wave-up {
+    position: absolute;
+    width: 1200px;
+    height: 167px;
+    left: 183px;
+    top: 120px;
+    filter: drop-shadow(0px 4px 12px #B8A12E);
+    z-index: 1;
+}
+
+.wave-middle {
+    position: absolute;
+    width: 1201px;
+    height: 154px;
+    left: 161px;
+    top: 512px;
+    opacity: 0.7;
+    filter: drop-shadow(0px 4px 15px #B8A12E);
+    z-index: 1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.wave-bottom {
+    position: absolute;
+    width: 1201px;
+    height: 154px;
+    left: 161px;
+    top: 1060px;
+    opacity: 0.7;
+    filter: drop-shadow(0px 4px 15px #B8A12E);
+    z-index: 1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.main__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0;
+    max-width: 1200px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==================== ЗАГОЛОВОК СТРАНИЦЫ ==================== */
+.page-title {
+    color: #C0A040;
+    text-align: center;
+    padding: 40px 0 40px;
+    font-size: 2.8rem;
+    position: relative;
+    animation: fadeIn 1s ease;
+}
+
+/* ==================== БЛОК КОНТАКТОВ И КАРТЫ ==================== */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 0;
+    position: relative;
+}
+
+.contacts-block {
+    background: #0a0a0a;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(192, 160, 64, 0.3);
+    box-shadow: 0 4px 15px rgba(192, 160, 64, 0.1);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.map-container {
+    background: #1A1A1A;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(192, 160, 64, 0.3);
+    box-shadow: 0 4px 15px rgba(192, 160, 64, 0.1);
+    height: 400px;
+    position: relative;
+    color: #C0A040;
+}
+
+/* ==================== ЭЛЕМЕНТЫ КОНТАКТОВ ==================== */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.contact-item:hover {
+    background: rgba(192, 160, 64, 0.1);
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    filter: drop-shadow(0 0 5px rgba(192, 160, 64, 0.3));
+}
+
+.contact-text, .contact-link {
+    font-size: 1.1rem;
+    color: #E0E0E0;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.contact-link {
+    color: #e0e0e0;
+}
+
+.contact-link:hover {
+    color: #D4B44A;
+    text-decoration: none;
+}
+
+/* ==================== ФОРМА ОБРАТНОЙ СВЯЗИ ==================== */
+.contact-form {
+    background: linear-gradient(145deg, #1A1A1A 0%, #0D0D0D 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(192, 160, 64, 0.3);
+    box-shadow: 0 4px 15px rgba(192, 160, 64, 0.1);
+    margin: 50px auto 0;
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-title {
+    color: #C0A040;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(192, 160, 64, 0.3);
+    border-radius: 8px;
+    color: #E0E0E0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    border-color: #C0A040;
+    background: rgba(192, 160, 64, 0.05);
+    box-shadow: 0 0 10px rgba(192, 160, 64, 0.2);
+}
+
+.form-button-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-btn {
+    width: fit-content;
+    background: #C0A040;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.submit-btn:hover {
+    background: #D4B44A;
+    box-shadow: 0 5px 15px rgba(192, 160, 64, 0.3);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(1px); /* Эффект нажатия */
+    box-shadow: 0 1px 2px rgba(192, 160, 64, 0.3); /* Уменьшенная тень */
+}
+
+/* ==================== АДАПТИВ ==================== */
+@media (max-width: 1200px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+        padding: 60px 0 30px;
+    }
+
+    .contacts-block {
+        padding: 25px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .icon {
+        margin-bottom: 15px;
+    }
+
+    .contact-form {
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-text, .contact-link {
+        font-size: 1rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+/* Анимации*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
