@@ -1,5 +1,5 @@
 // Загрузка футера
-fetch('/footer.html')
+fetch('./footer.html')
     .then(response => {
         if (!response.ok) throw new Error('Футер не найден');
         return response.text();

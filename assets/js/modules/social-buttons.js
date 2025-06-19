@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tgIcon.href = "https://t.me/+79913676565";
     tgIcon.target = "_blank";
     tgIcon.innerHTML = `
-        <img src="assets/images/icons/icons-telegram.svg" alt="Telegram" 
+        <img src="./assets/images/icons/icons-telegram.svg" alt="Telegram" 
              style="mix-blend-mode: luminosity">
     `;
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     waIcon.href = "https://wa.me/+79913676565";
     waIcon.target = "_blank";
     waIcon.innerHTML = `
-        <img src="assets/images/icons/icons-whatsapp.svg" alt="WhatsApp"
+        <img src="./assets/images/icons/icons-whatsapp.svg" alt="WhatsApp"
              style="mix-blend-mode: luminosity">
     `;
 

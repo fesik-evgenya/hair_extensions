@@ -1,5 +1,5 @@
 // Загрузка меню
-fetch('/menu.html')
+fetch('./menu.html')
     .then(response => {
         if (!response.ok) throw new Error('Меню не найдено');
         return response.text();
