@@ -21,18 +21,20 @@
           content="Итальянское и горячее наращивание, коррекция, снятие и обучение. Длина. Густота. Совершенство.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hairlong.ru//korrektsiya-volos.html">
-    <meta property="og:image" content="https://hairlong.ru/images/preview.jpg">
+    <meta property="og:image" content="https://hairlong.ru/assets/images/content/preview.webp">
     <meta property="og:site_name" content="Мастер наращивания волос Виктория">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/korrektsiya-volos.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/social-buttons.css">
+    <link rel="stylesheet" href="assets/css/services-common.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/social-buttons.css">
     <!-- Шрифты -->
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2"
+          crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff"
+          crossorigin>
     <!-- Язык сайта -->
     <meta name="language" content="Russian">
     <!-- Автор -->
@@ -71,12 +73,14 @@
         }
     </script>
 </head>
+
 <body>
+
 <div id="header-container">
     <div class="loading-spinner"></div>
 </div>
 
-<nav class="breadcrumbs" aria-label="Навигация по разделам">
+<nav class="breadcrumbs container" aria-label="Навигация по разделам">
     <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
             <a href="index.html" class="breadcrumbs__link">Главная</a>
@@ -89,50 +93,68 @@
         </li>
     </ul>
 </nav>
-<section class="content">
-    <div class="content__title"><h1>Коррекция нарощенных волос — профессиональная поддержка и уход</h1></div>
-    <div class="wave-background">
-        <img src="images/Wave_up.svg" alt="волны наверху" class="wave-up">
-        <img src="images/Wave_bottom.svg" alt="волны внизу" class="wave-bottom">
-    </div>
-    <div class="content__info">
-        <img src="images/correction.png" alt="коррекция нарощенных волос"
-             class="content__info-pic">
-        <div class="content__info-text">
-            <p class="content__info-text-p">Коррекция нарощенных волос — обязательная процедура для поддержания
-                идеального объема и аккуратного вида. Используются щадящие методы, которые не повреждают натуральные
-                волосы, но возвращают прическе безупречную форму. Работаем с качественными материалами
-                премиум-класса.</p>
-            <h2>Почему нужна коррекция?</h2>
-            <ul class="content__info-list-item">
-                <li>Сохраняет плотность и равномерность наращивания.</li>
-                <li>Устраняет отросшие участки у корней.</li>
-                <li>Предотвращает спутывание волос</li>
-                <li>Продлевает срок носки нарощенных прядей до <strong class="content__info-list-item-strong">3–4
-                    месяцев</strong>.
-                </li>
-            </ul>
-            <div class="content__info-text-price">
-                <div><h2>Стоимость:</h2></div>
-                <ul>
-                    <li>Коррекция (длина до __ см):  000 ₽</li>
-                    <li>Коррекция (длина от __до__ см):  000 ₽</li>
-                    <li>Премиум-пряди (100% натуральные волосы): от 000 ₽</li>
-                </ul>
+
+<main class="service container">
+    <div class="service__main">
+        <h1 class="service__title" data-admin-text="title">Коррекция нарощенных волос — профессиональная поддержка и
+            уход</h1>
+
+        <article class="service__content">
+            <div class="service__image-container" data-admin-image="main">
+                <div class="image-wrapper">
+                    <img src="assets/images/content/correction.webp"
+                         alt="коррекция нарощенных волос"
+                         class="service__image">
+                </div>
             </div>
-        </div>
+
+            <div class="service__info-group">
+            <div class="service__info">
+                <p class="service__description" data-admin-text="description">
+                    Коррекция нарощенных волос — обязательная процедура для поддержания идеального объема и аккуратного
+                    вида. Используются щадящие методы, которые не повреждают натуральные волосы, но возвращают прическе
+                    безупречную форму. Работаем с качественными материалами премиум-класса.
+                </p>
+            </div>
+
+            <section class="service__pricing" data-admin-text="pricing">
+                <h2 class="service__subtitle">Стоимость:</h2>
+                <ul class="pricing__list">
+                    <li class="pricing__item">Коррекция (длина до __ см): 000 ₽</li>
+                    <li class="pricing__item">Коррекция (длина от __до__ см): 000 ₽</li>
+                    <li class="pricing__item">Премиум-пряди (100% натуральные волосы): от 000 ₽</li>
+                </ul>
+                <div class="service__promo" data-admin-text="promo">
+                    <img src="assets/images/icons/fire_icon.png" alt="иконка огонь" class="fire-icon">
+                    <p>Акция: При записи онлайн — скидка 10% на работу мастера!</p>
+                </div>
+            </section>
+            </div>
+
+            <section class="service__features" data-admin-text="features">
+                <h2 class="service__subtitle">Почему нужна коррекция?</h2>
+                <ul class="features__list">
+                    <li class="features__item" data-admin-text="feature1">Сохраняет плотность и равномерность
+                        наращивания.
+                    </li>
+                    <li class="features__item" data-admin-text="feature2">Устраняет отросшие участки у корней.</li>
+                    <li class="features__item" data-admin-text="feature3">Предотвращает спутывание волос</li>
+                    <li class="features__item" data-admin-text="feature4">Продлевает срок носки нарощенных прядей до
+                        <strong>3–4 месяцев</strong>.
+                    </li>
+                </ul>
+            </section>
+        </article>
     </div>
-    <div class="content__info-text-sale"><img src="images/fire_icon.png" alt="">
-        <p>Акция: При записи онлайн — скидка 10% на работу мастера!</p>
-    </div>
-</section>
+
+</main>
 
 <div id="footer-container">
     <div class="loading-spinner"></div>
 </div>
 
-<script src="/js/footer-loader.js" defer></script>
-<script src="/js/menu-loader.js" defer></script>
-<script src="/js/social-buttons.js" defer></script>
+<script src="assets/js/modules/footer-loader.js" defer></script>
+<script src="assets/js/modules/menu-loader.js" defer></script>
+<script src="assets/js/modules/social-buttons.js" defer></script>
 </body>
 </html>

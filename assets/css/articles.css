@@ -1,0 +1,310 @@
+/* ==================== ШРИФТЫ ==================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat/Montserrat-Thin.woff2') format('woff2'),
+    url('assets/fonts/Montserrat/Montserrat-Thin.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== БАЗОВЫЕ СТИЛИ ==================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    background-color: #000000;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #FFFFFF;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #C0A040;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    a:hover, .btn:hover {
+        text-decoration: none;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/* ==================== ФОН СТРАНИЦЫ С ВОЛНАМИ ==================== */
+.article__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.decoration__waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: float 30s infinite linear;
+}
+
+.decoration__wave {
+    max-width: 1200px;
+    width: 100%;
+    filter: drop-shadow(0px 4px 12px rgba(184, 161, 46, 0.3));
+    position: relative;
+    opacity: 0.7;
+}
+
+.decoration__wave:first-child {
+    top: -10%;
+}
+
+.decoration__wave:last-child {
+    bottom: -10%;
+}
+
+
+/* ==================== ХЛЕБНЫЕ КРОШКИ ==================== */
+.breadcrumbs {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    padding: 8px 0;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+}
+
+.breadcrumbs ul {
+    display: flex;
+    gap: 4px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+    content: '›';
+    margin: 0 4px;
+    color: #C0A040;
+}
+
+.breadcrumbs__link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.breadcrumbs__link:hover {
+    color: #C0A040;
+}
+
+.breadcrumbs__current {
+    color: #C0A040;
+}
+
+/* ==================== ЗАГОЛОВОК СТРАНИЦЫ ==================== */
+.article__title {
+    color: #C0A040;
+    text-align: center;
+    margin-bottom: 10px;
+    max-width: 1200px;
+}
+
+/* ==================== КОНТЕНТ ==================== */
+.article {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+.article__header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.article__image {
+    flex: 0 0 350px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px 10px rgba(212, 175, 55, 0.2);
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+}
+
+.article__content {
+    flex: 1;
+}
+
+.article__section {
+    margin-bottom: 30px;
+}
+
+/* ==================== СПИСКИ ==================== */
+
+.list {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.list__item {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.list--checked .list__item::before {
+    content: "✔";
+    color: #C0A040;
+    margin-right: 8px;
+}
+
+.list--cross .list__item::before {
+    content: "✖";
+    color: #C04040;
+    margin-right: 8px;
+}
+
+/* CTA блок */
+.cta-block {
+    background: rgba(192, 160, 64, 0.1);
+    border-left: 3px solid #C0A040;
+    padding: 15px 20px;
+    margin: 30px 0;
+    font-style: italic;
+}
+
+/* ==================== АДАПТИВ ==================== */
+/* Ноутбуки (1024px) */
+@media (max-width: 1024px) {
+    .article__header {
+        gap: 20px;
+    }
+
+    .article__image {
+        flex-basis: 320px;
+        height: 450px;
+    }
+
+    .decoration__wave {
+        max-width: 900px;
+    }
+
+    .list__item {
+        text-align: justify;
+        max-width: 95%;
+        margin-left: 10px;
+    }
+}
+
+/* 768px - Планшеты и крупные мобильные (iPhone 6+,7+,8+, XR, 11, Samsung Galaxy) */
+@media (max-width: 768px) {
+    .article__header {
+        flex-direction: column;
+    }
+
+    .article__title {
+        max-width: 500px;
+        margin: 0 auto 15px;
+    }
+
+    .article__image {
+        width: 300px;
+        height: auto;
+        flex-basis: auto;
+    }
+
+    .breadcrumbs {
+        margin-top: 80px;
+        max-width: 500px;
+    }
+}
+
+/* 600px - Средние мобильные (iPhone 6,7,8, X, XS, 11 Pro, 12/13 mini, SE 2020) */
+@media (max-width: 600px) {
+    .article {
+        padding: 15px;
+    }
+
+    .article__title {
+        font-size: 1.8rem;
+    }
+}
+
+/* 480px - Мелкие мобильные (iPhone 5/5S/SE, Samsung S3/S4/S5) */
+@media (max-width: 480px) {
+    .breadcrumbs__container {
+        font-size: 13px;
+    }
+
+    .list {
+        padding-left: 15px;
+    }
+}
+
+/* 350px - Маленькие мобильные */
+@media (max-width: 350px) {
+    .article__title {
+        font-size: 1.3rem;
+    }
+
+    .breadcrumbs__container {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

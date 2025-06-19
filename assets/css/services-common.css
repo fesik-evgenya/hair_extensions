@@ -1,0 +1,559 @@
+/* ==================== ШРИФТЫ ==================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Thin.woff2') format('woff2'),
+    url('../fonts/Montserrat/Montserrat-Thin.woff') format('woff');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/Playfair_Display/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('../fonts/Playfair_Display/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: 400 900;
+    font-display: swap;
+}
+
+/* ==================== БАЗОВЫЕ СТИЛИ ==================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #C0A040;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    /* Отключение hover-эффектов для сенсорных устройств */
+    .service__image:hover {
+        transform: none;
+    }
+
+    .advantages__item:hover {
+        background: rgba(192, 160, 64, 0.05);
+        border-color: rgba(192, 160, 64, 0.15);
+    }
+}
+
+/* ==================== ХЛЕБНЫЕ КРОШКИ ==================== */
+.breadcrumbs {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 17px;
+    padding: 8px 0;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+}
+
+.breadcrumbs ul {
+    display: flex;
+    gap: 4px;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+
+.breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+    content: '›';
+    margin: 0 4px;
+    color: #C0A040;
+}
+
+.breadcrumbs__link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.breadcrumbs__link:hover {
+    color: #C0A040;
+}
+
+.breadcrumbs__current {
+    color: #C0A040;
+}
+
+/* ==================== СЕКЦИЯ СЕРВИС ==================== */
+.service {
+    position: relative;
+    padding: 20px 20px;
+}
+
+.service__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #C0A040;
+}
+
+.service__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "image info"
+        "features features";
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.service__image-container {
+    grid-area: image;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px 10px rgba(212, 175, 55, 0.2);
+    align-self: start;
+    justify-self: center;
+}
+
+.service__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.service__image:hover {
+    transform: scale(1.03);
+}
+
+.service__info-group {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service__info {
+    grid-area: info;
+    min-width: 300px;
+}
+
+.service__description {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    line-height: 1.7;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.service__features {
+    grid-area: features;
+    align-self: start;
+    margin: 0 auto;
+}
+
+.service__pricing {
+    grid-area: pricing;
+    align-self: start;
+}
+
+
+.service__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #C0A040;
+}
+
+.service__subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #C0A040;
+}
+
+.features__list {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.features__item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.features__item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #C0A040;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.pricing__list {
+    list-style: none;
+}
+
+.pricing__item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.pricing__item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #C0A040;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.service__promo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(192, 160, 64, 0.1);
+    border-radius: 8px;
+    margin-top: 0;
+    justify-content: center;
+    font-style: italic;
+    color: #a0a0a0;
+}
+
+.fire-icon {
+    width: 24px;
+    height: 24px;
+    animation: fire-effect 1.5s infinite alternate ease-in-out;
+}
+
+/* ==================== АНИМАЦИИ ==================== */
+@keyframes fire-effect {
+    0% {
+        filter: drop-shadow(0 0 2px rgba(255, 80, 0, 0.7)) brightness(1);
+        transform: scale(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 4px rgba(255, 40, 0, 0.9)) brightness(1.1);
+        transform: scale(1.05);
+    }
+    100% {
+        filter: drop-shadow(0 0 6px rgba(255, 0, 0, 1)) brightness(1.2);
+        transform: scale(1.1);
+    }
+}
+
+/* ==================== АДАПТИВНОСТЬ ==================== */
+/* 1024px - Ноутбуки */
+@media (max-width: 1024px) {
+    .service__title {
+        font-size: 1.8rem;
+    }
+
+    .service__subtitle {
+        font-size: 1.3rem;
+    }
+
+    .service__content {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .service__image-container {
+        max-width: 100%;
+        grid-area: image;
+        margin: 0 auto 20px;
+    }
+
+    .service__image {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .service__info {
+        width: 100%;
+        text-align: left;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 calc(50% - 30px);
+        min-width: auto;
+    }
+
+    .service__description {
+        grid-area: description;
+    }
+
+    .service__features {
+        grid-area: features;
+    }
+
+    .service__pricing {
+        grid-area: pricing;
+    }
+
+    .service__info {
+        grid-template-rows: unset;
+        grid-template-areas:
+            "description"
+            "features"
+            "pricing";
+    }
+
+    .service__subtitle::after {
+        transform: none;
+    }
+
+    .features__list,
+    .pricing__list {
+        display: block;
+        text-align: left;
+        padding-left: 0;
+    }
+}
+
+/* 768px - Планшеты и крупные мобильные (iPhone 6+,7+,8+, XR, 11, Samsung Galaxy) */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        margin-top: 50px;
+        padding: 10px 15px;;
+    }
+
+    .service__title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .service__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "image"
+            "info"
+            "features"
+            "pricing";
+    }
+
+    .service__description {
+        font-size: 1rem;
+    }
+
+    .service__image-container {
+        grid-area: image;
+        grid-row: unset;
+        grid-column: unset;
+        max-width: 400px;
+        margin: 0 auto 20px;
+    }
+
+    .service__info {
+        grid-area: info;
+        grid-row: unset;
+        grid-column: unset;
+    }
+
+    .service__pricing {
+        grid-area: pricing;
+        grid-row: unset;
+        grid-column: unset;
+    }
+
+    .service__subtitle::after {
+        transform: none;
+    }
+
+    .service__features {
+        grid-area: features;
+        grid-row: unset;
+        grid-column: unset;
+        margin-top: 20px;
+    }
+
+    .features__item,
+    .pricing__item {
+        font-size: 1rem;
+    }
+}
+
+/* 600px - Средние мобильные (iPhone 6,7,8, X, XS, 11 Pro, 12/13 mini, SE 2020) */
+@media (max-width: 600px) {
+    .breadcrumbs {
+        margin-top: 70px;
+        padding: 10px 15px;
+    }
+
+    .service__content {
+        grid-template-columns: 1fr;
+    }
+
+    .service__title {
+        font-size: 1.4rem;
+    }
+
+    .service__subtitle {
+        font-size: 1.2rem;
+    }
+
+    .service__promo {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* 480px - Мелкие мобильные (iPhone 5/5S/SE, Samsung S3/S4/S5) */
+@media (max-width: 480px) {
+    .breadcrumbs {
+        padding: 25px 15px 10px;
+    }
+
+    .breadcrumbs__list {
+        font-size: 0.9rem;
+        margin-top: 70px;
+    }
+
+    .service__title {
+        font-size: 1.3rem;
+    }
+
+    .service__promo {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .features__item,
+    .pricing__item {
+        font-size: 0.95rem;
+    }
+
+    .fire-icon {
+        will-change: transform, filter;
+    }
+}
+
+/* 350px - Маленькие мобильные */
+@media (max-width: 350px) {
+    .container {
+        margin: 0 5px 10px;
+    }
+
+    .breadcrumbs {
+        margin-top: 90px;
+        padding: 35px 10px 10px;
+    }
+
+    .breadcrumbs__list {
+        font-size: 0.8rem;
+        gap: 4px;
+    }
+
+    .breadcrumbs__item:not(:last-child)::after {
+        margin: 0 2px;
+    }
+
+    .service {
+        padding: 15px 0;
+    }
+
+    .service__title {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+
+    .service__description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .service__subtitle {
+        font-size: 1.1rem;
+        padding-bottom: 8px;
+    }
+
+    .service__subtitle::after {
+        width: 40px;
+        height: 1px;
+    }
+
+    .features__item,
+    .pricing__item {
+        font-size: 0.85rem;
+        padding-left: 20px;
+        margin-bottom: 8px;
+    }
+
+    .features__item::before,
+    .pricing__item::before {
+        font-size: 1.2rem;
+    }
+
+    .service__promo {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    .fire-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .service__image-container {
+        min-width: 100%;
+        margin: 0;
+        box-shadow: 0 2px 6px 5px rgba(212, 175, 55, 0.2);
+        border-radius: 8px;
+    }
+
+    .service__info {
+        padding: 0 5px;
+    }
+
+    /* Отключение hover-эффектов для сенсорных устройств */
+    .service__image:hover {
+        transform: none;
+    }
+}

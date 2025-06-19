@@ -19,21 +19,21 @@
           content="Профессиональное наращивание волос в Ростове-на-Дону. Капсульное, горячее, итальянское. Фото до/после, отзывы, доступные цены.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hairlong.ru">
-    <meta property="og:image" content="https://hairlong.ru/images/preview.jpg">
+    <meta property="og:image" content="https://hairlong.ru/assets/images/content/preview.webp">
     <meta property="og:site_name" content="Виктория — мастер по наращиванию волос">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/kontakty-mastera.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/social-buttons.css">
+    <link rel="stylesheet" href="assets/css/kontakty-mastera.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/social-buttons.css">
     <!-- Шрифты -->
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2"
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff2" as="font" type="font/woff2"
           crossorigin>
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff" as="font" type="font/woff"
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff" as="font" type="font/woff"
           crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2"
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2"
           crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff"
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff"
           crossorigin>
     <!-- Язык сайта -->
     <meta name="language" content="Russian">
@@ -50,124 +50,142 @@
     <div class="loading-spinner"></div>
 </div>
 
-<!-- Фоновые волны -->
-<div class="wave-background">
-    <img src="images/Wave_up.svg" alt="Волны" class="wave-up">
-    <img src="images/Wave_bottom.svg" alt="Волны" class="wave-middle">
-    <img src="images/Wave_bottom.svg" alt="Волны" class="wave-bottom">
-</div>
-
-<div class="main__content">
-    <h1 class="page-title">Мои контакты</h1>
-    <div class="content-wrapper">
-
-        <!-- Блок контактной информации -->
-        <div class="contacts-block">
-            <div class="contact-item">
-                <img src="images/icon-home.svg" alt="Адрес" class="icon">
-                <p class="contact-text" data-admin-field="address">г. Ростов-на-Дону, Нахичевань,<br> 30-я Линия
-                    д.6</p>
-            </div>
-
-            <div class="contact-item">
-                <img src="images/icon_email.svg" alt="Email" class="icon">
-                <a href="mailto:my-longhair@mail.ru" class="contact-link"
-                   data-admin-field="email">my-longhair@mail.ru</a>
-            </div>
-
-            <div class="contact-item">
-                <img src="images/icon_phone.svg" alt="Телефон" class="icon">
-                <a href="tel:+79913676565" class="contact-link" data-admin-field="phone">+7 (991) 367-65-65</a>
-            </div>
-
-            <div class="contact-item">
-                <img src="images/icon_VK.svg" alt="Vkontante" class="icon">
-                <a href="https://vk.com/narashchivanie_rostov" class="contact-link" data-admin-field="vk_link">Группа в VK</a>
-            </div>
-        </div>
-
-        <!-- Блок с картой -->
-        <div class="map-container" id="map"></div>
+<main class="main">
+    <!-- Волны фона -->
+    <div class="wave-background">
+        <img src="assets/images/backgrounds/Wave_up.svg" alt="" class="wave-background__top" loading="lazy">
+        <img src="assets/images/backgrounds/Wave_bottom.svg" alt="" class="wave-background__middle" loading="lazy">
+        <img src="assets/images/backgrounds/Wave_bottom.svg" alt="" class="wave-background__bottom" loading="lazy">
     </div>
-    <!-- Форма обратной связи -->
-    <form class="contact-form" id="myForm">
-        <h2 class="form-title">Напишите мне</h2>
 
-        <div class="form-group">
-            <input type="text" name="name" placeholder="Ваше имя" required>
+    <div class="main__content">
+        <h1 class="page-title" data-admin-field="page_title">Мои контакты</h1>
+
+        <div class="contacts-grid">
+
+            <!-- Контактная информация -->
+            <div class="contacts-block">
+
+                <div class="contact-item">
+                    <img src="assets/images/icons/icon-home.svg" alt="Адрес" class="contact-item__icon">
+                    <p class="contact-item__text" data-admin-field="address">г. Ростов-на-Дону, Нахичевань, 30-я Линия
+                        д.6</p>
+                </div>
+
+                <div class="contact-item">
+                    <img src="assets/images/icons/icon_email.svg" alt="Email" class="contact-item__icon">
+                    <a href="mailto:my-longhair@mail.ru" class="contact-link" data-admin-field="email">my-longhair@mail.ru</a>
+                </div>
+
+                <div class="contact-item">
+                    <img src="assets/images/icons/icon_phone.svg" alt="Телефон" class="contact-item__icon">
+                    <a href="tel:+79913676565" class="contact-link" data-admin-field="phone">+7 (991) 367-65-65</a>
+                </div>
+
+                <div class="contact-item">
+                    <img src="assets/images/icons/icon_VK.svg" alt="Vkontante" class="contact-item__icon">
+                    <a href="https://vk.com/narashchivanie_rostov" class="contact-link" data-admin-field="vk_link">Группа
+                        в VK</a>
+                </div>
+            </div>
+
+            <!-- Блок с картой -->
+            <div class="map-container" id="map"></div>
         </div>
 
-        <div class="form-group">
-            <input type="email" name="email" placeholder="Ваш email" required>
-        </div>
+        <!-- Форма обратной связи -->
+        <form class="contact-form" id="myForm">
+            <h2 class="form-title">Напишите мне</h2>
 
-        <div class="form-group">
-            <textarea name="message" placeholder="Ваше сообщение" rows="4" required></textarea>
-        </div>
-        <div class="form-button-container">
-            <button type="submit" class="submit-btn">Отправить сообщение</button>
-        </div>
-    </form>
-</div>
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+            </div>
 
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-    emailjs.init('Igz9AEDR5UaDNJd-A');
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Ваш email" required>
+            </div>
 
-    document.getElementById('myForm').addEventListener('submit', function(e) {
-        e.preventDefault();
+            <div class="form-group">
+                <textarea name="message" placeholder="Ваше сообщение" rows="4" required></textarea>
+            </div>
+            <div class="form-button-container">
+                <button type="submit" class="submit-btn">Отправить сообщение</button>
+            </div>
+        </form>
+    </div>
 
-        if(!this.email.value) {
-            alert('Пожалуйста, введите email');
-            return;
-        }
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('Igz9AEDR5UaDNJd-A');
 
-        const params = {
-            from_name: this.name.value,
-            client_email: this.email.value, // Важно: имя поля формы
-            message: this.message.value
-        };
+        document.getElementById('myForm').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-        console.log('Отправляемые параметры:', params); // Для отладки
+            if (!this.email.value) {
+                alert('Пожалуйста, введите email');
+                return;
+            }
 
-        emailjs.send("service_gw5kffp", "template_ymqrp3q", params)
-            .then(() => {
-                alert('Сообщение отправлено!');
-                this.reset();
-            })
-            .catch((error) => {
-                console.error('Ошибка:', error);
-                alert('Ошибка: ' + (error.text || error.message));
-            });
-    });
-</script>
+            const params = {
+                from_name: this.name.value,
+                client_email: this.email.value, // Важно: имя поля формы
+                message: this.message.value
+            };
 
-<script>
-    <!-- Инициализация Яндекс.Карты -->
-    ymaps.ready(init);
+            console.log('Отправляемые параметры:', params); // Для отладки
 
-    function init() {
-        const myMap = new ymaps.Map("map", {
-            center: [47.223923, 39.723442], // Координаты адреса
-            zoom: 16
+            emailjs.send("service_gw5kffp", "template_ymqrp3q", params)
+                .then(() => {
+                    alert('Сообщение отправлено!');
+                    this.reset();
+                })
+                .catch((error) => {
+                    console.error('Ошибка:', error);
+                    alert('Ошибка: ' + (error.text || error.message));
+                });
         });
+    </script>
 
-        myMap.geoObjects.add(new ymaps.Placemark(
-            [47.223923, 39.723442],
-            {balloonContent: 'Принимаю здесь'},
-            {preset: 'islands#icon', iconColor: '#2d3e50'}
-        ));
-    }
-</script>
+    <script>
+        <!-- Инициализация Яндекс.Карты -->
+        ymaps.ready(init);
+
+        function init() {
+            const myMap = new ymaps.Map("map", {
+                center: [47.232414, 39.767951],
+                zoom: 16
+            });
+
+            // Создаем кастомную метку
+            const myPlacemark = new ymaps.Placemark(
+                [47.232414, 39.767951],
+                {balloonContent: 'Принимаю здесь'},
+                {
+                    // Кастомная иконка метки в золотом стиле
+                    iconLayout: 'default#image',
+                    iconImageHref: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjI1NiIgZmlsbD0iI0MwQTA0MCIgb3BhY2l0eT0iMC45Ii8+PGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIxODAiIGZpbGw9IiNGRkYiLz48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjEyMCIgZmlsbD0iI0MwQTA0MCIvPjwvc3ZnPg==',
+                    iconImageSize: [40, 40],
+                    iconImageOffset: [-20, -20]
+                }
+            );
+
+            myMap.geoObjects.add(myPlacemark);
+
+            // Добавляем элементы управления
+            myMap.controls.add('zoomControl', {
+                position: {right: 10, top: 100}
+            });
+        }
+    </script>
+</main>
 
 <div id="footer-container">
     <div class="loading-spinner"></div>
 </div>
 
-<script src="/js/social-buttons.js" defer></script>
-<script src="/js/menu-loader.js" defer></script>
-<script src="/js/footer-loader.js" defer></script>
-
+<script src="assets/js/modules/footer-loader.js" defer></script>
+<script src="assets/js/modules/menu-loader.js" defer></script>
+<script src="assets/js/modules/social-buttons.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,649 @@
+/* ==================== ШРИФТЫ ==================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat/Montserrat-Thin.woff2') format('woff2'),
+    url('assets/fonts/Montserrat/Montserrat-Thin.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== БАЗОВЫЕ СТИЛИ ==================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    margin-top: 0;
+
+}
+
+/* ==================== ХЛЕБНЫЕ КРОШКИ ==================== */
+
+.breadcrumbs {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 17px;
+    padding: 8px 0;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+}
+
+.breadcrumbs ul {
+    display: flex;
+    gap: 4px;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+
+.breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+    content: '›';
+    margin: 0 4px;
+    color: #C0A040;
+}
+
+.breadcrumbs__link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.breadcrumbs__link:hover {
+    color: #C0A040;
+}
+
+.breadcrumbs__current {
+    color: #C0A040;
+}
+
+/* ==================== КАРТОЧКИ ==================== */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.services__title {
+    color: #C0A040;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    animation: fadeIn 1s ease;
+    vertical-align: text-top;
+}
+
+.services__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.services__card {
+    background: #121212;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: calc(30% - 20px);
+    min-height: 350px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.services__card-img {
+    width: 100%;
+    height: 220px;
+    border-radius: 20px;
+}
+
+.services__card-header {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.service-card__icon {
+    height: 30px;
+    object-fit: contain;
+    transform: translateY(-50%);
+}
+
+.services__card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-card__title {
+    width: 100%;
+    max-width: 100%;
+    height: 70px;
+    top: 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-align: justify;
+    color: #C0A040;
+    order: 1;
+    padding-right: 5px;
+}
+
+.service-card__description {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 80%;
+    color: #FFFFFF;
+    width: 340px;
+    max-width: 100%;
+    height: 40px;
+    text-align: justify;
+    padding: 5px;
+    margin-top: -10px;
+    box-sizing: border-box;
+}
+
+/* ==================== КНОПКИ ==================== */
+.btn--outline {
+    background-color: #000000;
+    border-radius: 12px;
+    border: 1px dashed #C0A040;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 70px;
+    text-align: center;
+    color: #C0A040;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(192, 160, 64, 0);
+    margin-top: 10px;
+    z-index: 2;
+}
+
+.btn--outline:hover {
+    background-color: rgba(192, 160, 64, 0.1);
+    box-shadow: 0 4px 8px rgba(192, 160, 64, 0.2);
+    transform: scale(1.02);
+}
+
+.btn--outline a {
+    text-decoration: none;
+    color: #C0A040;
+    transition: color 0.3s ease;
+}
+
+.btn--outline:hover a {
+    color: #D4B44A;
+}
+
+/* ==================== ФОН ==================== */
+.wave__container-up,
+.wave__container-middle,
+.wave__container-bottom {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.wave__divider-up,
+.wave__divider-middle,
+.wave__divider-bottom {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 50px;
+}
+
+.wave__container-up {
+    margin: -60vw 0 -5vw 0;
+}
+
+.wave__container-middle {
+    margin: -40vw 0 -5vw 0;
+}
+
+.wave__container-bottom {
+    margin: -10vw 0 0;
+}
+
+/* ==================== АНИМАЦИИ ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== АДАПТИВНОСТЬ ==================== */
+
+/* 1024px - Ноутбуки */
+@media (max-width: 1024px) {
+    .services__card {
+        flex: 0 0 calc(35% - 20px);
+        max-width: calc(35% - 20px);
+        min-height: 460px;
+    }
+
+    .service-card__title {
+        font-size: 1.3rem;
+    }
+
+    .service-card__description {
+        font-size: 0.92rem;
+    }
+
+    .wave__container-up {
+        margin: -80vw 0 -6vw 0;
+    }
+
+    .wave__container-middle {
+        margin: -50vw 0 -6vw 0;
+    }
+}
+
+/* 850px и высота 450px - iPhone Landscape */
+@media (max-width: 850px) and (max-height: 450px) {
+    .services__title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .services__title h1 {
+        margin-bottom: 0;
+    }
+
+    .services__cards {
+        justify-content: space-around;
+    }
+
+    .services__card {
+        flex: 0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+        min-height: 380px;
+    }
+
+    .services__card-img-container {
+        height: 150px;
+    }
+
+    .services__card-header {
+        min-height: 70px;
+        padding: 10px 12px 5px;
+    }
+
+    .service-card__title {
+        font-size: 1.15rem;
+    }
+
+    .service-card__description {
+        font-size: 0.82rem;
+        margin-bottom: 12px;
+    }
+
+    .btn--outline {
+        width: 110px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .wave__container-up {
+        margin: -160vw 0 -12vw 0;
+        z-index: 2;
+    }
+
+    .wave__container-middle {
+        margin: -105vw 0 -12vw 0;
+    }
+
+    .wave__container-bottom {
+        margin: -12vw 0 0 0;
+
+    }
+
+}
+
+/* 768px - Планшеты */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        margin-top: 60px;
+    }
+
+    .services__title {
+        font-size: 1.8rem;
+    }
+
+    .services__cards {
+        gap: 15px;
+    }
+
+    .services__card {
+        flex: 0 0 calc(50% - 15px);
+        max-width: 100%;
+        min-height: 440px;
+    }
+
+    .services__card-header {
+        padding: 15px 15px 8px;
+        min-height: 80px;
+    }
+
+    .service-card__title {
+        font-size: 1.25rem;
+    }
+
+    .service-card__description {
+        font-size: 0.9rem;
+    }
+
+    .btn--outline {
+        width: 110px;
+        height: 36px;
+        font-size: 13px;
+    }
+
+    .wave__container-up {
+        margin: -190vw 0 -7vw 0;
+    }
+
+    .wave__container-middle {
+        margin: -125vw 0 -7vw 0;
+    }
+
+    .wave__container-bottom {
+        margin: -10vw 0 0;
+    }
+}
+
+/* 600px - Небольшие планшеты */
+@media (max-width: 600px) {
+    .services__title h1{
+        margin-bottom: 10px;
+    }
+
+    .services__cards {
+        gap: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .services__card {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+        min-height: 350px;
+    }
+
+    .services__card-img-container {
+        height: 180px;
+    }
+
+    .services__card-header {
+        flex-direction: row;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 15px 10px 5px;
+    }
+
+    .service-card__title {
+        font-size: 1.2rem;
+        flex: 1;
+        min-width: 60%;
+    }
+
+    .service-card__description {
+        font-size: 0.88rem;
+        text-align: center;
+        height: 60px;
+        margin-top: 5px;
+    }
+
+    .btn--outline {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 140px;
+    }
+
+    .wave__container-up {
+        margin: -260vw 0 -8vw 0;
+    }
+
+    .wave__container-middle {
+        margin: -175vw 0 -8vw 0;
+    }
+
+    .wave__container-bottom {
+        margin: -13vw 0 -8vw 0;
+    }
+    .wave__divider-up,
+    .wave__divider-middle,
+    .wave__divider-bottom {
+        min-height: 40px;
+    }
+}
+
+/* 480px - Мобильные (вертикальная ориентация) */
+@media (max-width: 480px) {
+    .breadcrumbs {
+        padding: 6px 0;
+        font-size: 13px;
+        margin-top: 55px;
+        margin-left: 10px;
+    }
+
+    .services {
+        padding: 0;
+    }
+
+    .services__title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        padding: 0 15px;
+    }
+
+    .services__title h1 {
+        margin-bottom: 10px;
+    }
+
+    .services__cards {
+        padding: 0 15px;
+    }
+
+    .services__card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .services__card-img {
+        height: 220px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .services__card-header {
+        padding: 15px 15px 10px;
+        justify-content: center;
+    }
+
+    .service-card__title {
+        font-size: 1.3rem;
+        height: auto;
+        margin-bottom: 5px;
+        text-align: center;
+        min-width: 70%;
+    }
+
+    .service-card__icon {
+        transform: translateY(0);
+        scale: 120%;
+    }
+
+    .service-card__description {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0 auto 15px;
+        padding: 0 10px;
+        text-align: center;
+        height: auto;
+        width: 100%;
+    }
+
+    .btn--outline {
+        height: 45px;
+        font-size: 1rem;
+        max-width: 200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .wave__container-up {
+        margin: -638vw 0 -10vw 0;
+    }
+
+    .wave__container-middle {
+        margin: -378vw 0 -10vw 0;
+    }
+
+    .wave__container-bottom {
+        margin: -16vw 0 0;
+    }
+
+    .wave__divider-up,
+    .wave__divider-middle,
+    .wave__divider-bottom {
+        min-height: 30px;
+    }
+}
+
+/* 350px - Маленькие мобильные */
+@media (max-width: 350px) {
+    .breadcrumbs {
+        font-size: 12px;
+        margin-top: 60px;
+    }
+
+    .services__title {
+        font-size: 1.3rem;
+        padding: 0 10px;
+    }
+
+    .services__cards {
+        padding: 0 10px;
+    }
+
+    .services__card {
+        max-width: 100%;
+    }
+
+    .services__card-img {
+        height: 180px;
+    }
+
+    .service-card__title {
+        font-size: 1.2rem;
+        padding: 0 8px;
+        min-width: 65%;
+    }
+
+    .service-card__description {
+        font-size: 0.9rem;
+        padding: 0 8px;
+    }
+
+    .btn--outline {
+        height: 40px;
+        font-size: 0.9rem;
+        max-width: 180px;
+    }
+
+    .wave__container-up {
+        margin: -610vw 0 -12vw 0;
+        opacity: 0.45;
+    }
+
+    .wave__container-middle {
+        margin: -360vw 0 -12vw 0;
+        opacity: 0.45;
+    }
+
+    .wave__container-bottom {
+        margin: -18vw 0 0 0;
+        opacity: 0.45;
+    }
+
+    .wave__divider-up,
+    .wave__divider-middle,
+    .wave__divider-bottom {
+        min-height: 25px;
+    }
+}

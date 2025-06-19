@@ -21,18 +21,20 @@
           content="Итальянское и горячее наращивание, коррекция, снятие и обучение. Длина. Густота. Совершенство.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://naraschivanie-volos-dlya-obema.html">
-    <meta property="og:image" content="https://hairlong.ru/images/preview.jpg">
+    <meta property="og:image" content="https://hairlong.ru/assets/images/content/preview.webp">
     <meta property="og:site_name" content="Мастер наращивания волос Виктория">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/naraschivanie-volos-dlya-obema.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/social-buttons.css">
+    <link rel="stylesheet" href="assets/css/services-common.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/social-buttons.css">
     <!-- Шрифты -->
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2"
+          crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff"
+          crossorigin>
     <!-- Язык сайта -->
     <meta name="language" content="Russian">
     <!-- Автор -->
@@ -84,7 +86,7 @@
     <div class="loading-spinner"></div>
 </div>
 
-<nav class="breadcrumbs" aria-label="Навигация по разделам">
+<nav class="breadcrumbs container" aria-label="Навигация по разделам">
     <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
             <a href="index.html" class="breadcrumbs__link">Главная</a>
@@ -97,47 +99,70 @@
         </li>
     </ul>
 </nav>
-<section class="content">
-    <div class="content__title"><h1>Загущение волос нарощенными прядями — объем и густота за 2 часа</h1></div>
-    <div class="wave-background">
-        <img src="images/Wave_up.svg" alt="волны наверху" class="wave-up">
-        <img src="images/Wave_bottom.svg" alt="волны внизу" class="wave-bottom">
-    </div>
-    <div class="content__info">
-        <img src="images/thickening.jpg" alt="загущение волос нарощенными прядями"
-             class="content__info-pic">
-        <div class="content__info-text">
-            <p class="content__info-text-p"><strong>Загущение волос нарощенными прядями</strong> — это быстрый способ добавить объем даже
-                самым редким волосам без вреда для натуральных волос. Используются только <strong>высококачественные пряди
-                премиум-класса</strong>, которые визуально увеличивают густоту в 2–3 раза. Результат держится до <b>4 месяцев</b> и
-                выглядит максимально естественно.</p>
-            <h2>Кому подойдет?</h2>
-            <ul class="content__info-list-item">
-                <li><strong>При тонких и редких волосах</strong> — пряди крепятся точечно в проблемных зонах.</li>
-                <li><strong>Для восстановления после выпадения</strong> — маскирует проплешины без операции.</li>
-                <li><strong>Для мгновенного преображения</strong> — объем появляется уже в день процедуры.</li>
-            </ul>
-            <div class="content__info-text-price">
-                <div><h2>Стоимость:</h2></div>
-                <ul>
-                    <li>Загущение теменной зоны:  000 ₽</li>
-                    <li>Полное загущение: 000 ₽</li>
-                    <li>Загущение натуральными прядями:  000 ₽</li>
-                </ul>
+
+<main class="service container">
+    <div class="service__main">
+        <h1 class="service__title">Загущение волос нарощенными прядями — объем и густота за 2 часа</h1>
+
+        <article class="service__content">
+            <div class="service__image-container">
+                <div class="image-wrapper">
+                    <img src="assets/images/content/thickening.webp"
+                         alt="загущение волос нарощенными прядями"
+                         class="service__image">
+                </div>
             </div>
-        </div>
+
+            <div class="service__info-group">
+                <div class="service__info">
+                    <p class="service__description">
+                        <strong>Загущение волос нарощенными прядями</strong> — это быстрый способ добавить объем даже
+                        самым редким волосам без вреда для натуральных волос. Используются только <strong>высококачественные
+                        пряди
+                        премиум-класса</strong>, которые визуально увеличивают густоту в 2–3 раза. Результат держится до
+                        <b>4 месяцев</b> и
+                        выглядит максимально естественно.
+                    </p>
+                </div>
+
+                <section class="service__pricing">
+                    <h2 class="service__subtitle">Стоимость:</h2>
+                    <ul class="pricing__list">
+                        <li class="pricing__item">Загущение теменной зоны: 000 ₽</li>
+                        <li class="pricing__item">Полное загущение: 000 ₽</li>
+                        <li class="pricing__item">Загущение натуральными прядями: 000 ₽</li>
+                    </ul>
+                    <div class="service__promo">
+                        <img src="assets/images/icons/fire_icon.png" alt="иконка огонь" class="fire-icon">
+                        <p>Акция: При записи онлайн — скидка 10% на работу мастера!</p>
+                    </div>
+                </section>
+            </div>
+                <section class="service__features">
+                    <h2 class="service__subtitle">Кому подойдет?</h2>
+                    <ul class="features__list">
+                        <li class="features__item">
+                            <strong>При тонких и редких волосах</strong> — пряди крепятся точечно в проблемных зонах.
+                        </li>
+                        <li class="features__item">
+                            <strong>Для восстановления после выпадения</strong> — маскирует проплешины без операции.
+                        </li>
+                        <li class="features__item">
+                            <strong>Для мгновенного преображения</strong> — объем появляется уже в день процедуры.
+                        </li>
+                    </ul>
+                </section>
+
+    </article>
     </div>
-    <div class="content__info-text-sale"><img src="images/fire_icon.png" alt="">
-        <p>Акция: При записи онлайн — скидка 10% на работу мастера!</p>
-    </div>
-</section>
+</main>
 
 <div id="footer-container">
     <div class="loading-spinner"></div>
 </div>
 
-<script src="/js/footer-loader.js" defer></script>
-<script src="/js/menu-loader.js" defer></script>
-<script src="/js/social-buttons.js" defer></script>
+<script src="assets/js/modules/footer-loader.js" defer></script>
+<script src="assets/js/modules/menu-loader.js" defer></script>
+<script src="assets/js/modules/social-buttons.js" defer></script>
 </body>
 </html>

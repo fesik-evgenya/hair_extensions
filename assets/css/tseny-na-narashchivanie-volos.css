@@ -1,0 +1,418 @@
+/* ==================== ШРИФТЫ ==================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat/Montserrat-Thin.woff2') format('woff2'),
+    url('assets/fonts/Montserrat/Montserrat-Thin.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== БАЗОВЫЕ СТИЛИ ==================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #000000;
+    color: #E0E0E0;
+    margin: 0;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== ГЛАВНЫЙ ЗАГОЛОВОК ==================== */
+.price-hero {
+    text-align: center;
+    padding: 80px 0 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.price-hero h1 {
+    color: #C0A040;
+    font-size: 2rem;
+    line-height: 1.2;
+    animation: fadeIn 1s ease;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #FFFFFF; /* Изменен цвет на белый */
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==================== ВОЛНЫ НА ФОНЕ ==================== */
+.wave-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.wave-up {
+    position: absolute;
+    width: 1200px;
+    height: 167px;
+    left: 183px;
+    top: 210px;
+    filter: drop-shadow(0px 4px 12px #B8A12E);
+    z-index: 1;
+}
+
+.wave-middle {
+    position: absolute;
+    width: 1201px;
+    height: 154px;
+    left: 161px;
+    top: 712px;
+    opacity: 0.7;
+    filter: drop-shadow(0px 4px 15px #B8A12E);
+    z-index: 1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.wave-bottom {
+    position: absolute;
+    width: 1201px;
+    height: 154px;
+    left: 161px;
+    top: 1112px;
+    opacity: 0.7;
+    filter: drop-shadow(0px 4px 15px #B8A12E);
+    z-index: 1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/* ==================== СЕТКА КАРТОЧЕК ==================== */
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .price-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .price-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== КАРТОЧКИ УСЛУГ ==================== */
+.price-card {
+    background: linear-gradient(145deg, #1A1A1A 0%, #0D0D0D 100%);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid rgba(192, 160, 64, 0.3);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    box-shadow: 0 4px 15px rgba(192, 160, 64, 0.1); /* Добавлена тень */
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    border-color: #C0A040;
+    box-shadow: 0 15px 30px rgba(192, 160, 64, 0.3); /* Усилена тень при наведении */
+}
+
+.price-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 0%, rgba(192,160,64,0.1) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.price-card:hover::before {
+    opacity: 1;
+}
+
+.price-card h3 {
+    color: #C0A040;
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+    height: 94px;
+    vertical-align: center;
+}
+
+.price-amount {
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+.price-amount span {
+    font-size: 1rem;
+    color: #e0e0e0;
+    font-weight: 400;
+    display: block;
+    margin-top: 5px;
+}
+
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex-grow: 1;
+}
+
+.price-features li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.price-features li::before {
+    content: '✓';
+    color: #C0A040;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.price-note {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    opacity: 0.8;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+/* ==================== СТИКЕР "ПОПУЛЯРНО" ==================== */
+
+.popular-badge {
+    position: absolute;
+    bottom: 30px;
+    right: -15px;
+    background: #C0A040;
+    color: #000000;
+    padding: 8px 25px;
+    border-radius: 20px 4px 4px 20px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 15px 30px rgba(192, 160, 64, 0.2);
+    z-index: 2;
+}
+
+/* Элемент свечения */
+.popular-badge::after {
+    content: '';
+    position: absolute;
+    left: 160px;
+    top: -5px;
+    transform: translateX(-130%);
+    width: 115%;
+    height: 115%;
+    background: linear-gradient(110deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    border-radius: 50%;
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Анимация свечения */
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.3;
+        filter: blur(5px);
+    }
+    50% {
+        opacity: 0.7;
+        filter: blur(8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .popular-badge {
+        right: -10px;
+        padding: 6px 20px;
+        font-size: 12px;
+    }
+
+    .popular-badge::after {
+        height: 10px;
+        bottom: -8px;
+    }
+}
+
+/* ==================== КНОПКИ ==================== */
+.btn_black {
+    background-color: #000000;
+    border-radius: 12px;
+    outline: 1px solid #C0A040;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 70px;
+    text-align: center;
+    color: #C0A040;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(192, 160, 64, 0);
+    z-index: 2;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.btn_black:hover {
+    background-color: rgba(192, 160, 64, 0.1);
+    box-shadow: 0 4px 8px rgba(192, 160, 64, 0.2);
+    transform: scale(1.02);
+}
+
+.btn_black a {
+    text-decoration: none;
+    color: #C0A040;
+    transition: color 0.3s ease;
+}
+
+.btn_black:hover a {
+    color: #D4B44A;
+}
+
+/* ==================== CTA БЛОК ==================== */
+.price-cta {
+    text-align: center;
+    width: 100%;
+}
+
+.price-cta h2 {
+    color: #C0A040;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* ==================== АНИМАЦИИ ==================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hologram {
+    0% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.8; transform: scale(1); }
+}
+
+@keyframes waveMove {
+    0% { transform: translateX(-25%); }
+    100% { transform: translateX(25%); }
+}
+
+/* ==================== АДАПТИВ ==================== */
+@media (max-width: 1024px) {
+    .price__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .price__hero {
+        padding: 40px 0 20px;
+    }
+
+    .price__main-title {
+        font-size: 1.8rem;
+    }
+
+    .price__grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .price__title {
+        min-height: auto;
+    }
+
+    .wave-up, .wave-bottom {
+        width: 200%;
+        left: -50% !important;
+        opacity: 0.1;
+    }
+
+    .price-cta {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .price__main-title {
+        font-size: 1.5rem;
+    }
+
+    .price__card {
+        padding: 20px 15px;
+    }
+}

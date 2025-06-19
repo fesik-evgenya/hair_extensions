@@ -21,18 +21,22 @@
           content="Итальянское и горячее наращивание, коррекция, снятие и обучение. Длина. Густота. Совершенство.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hairlong.ru/uslugi-narashchivaniya-volos.html">
-    <meta property="og:image" content="https://hairlong.ru/images/preview.jpg">
+    <meta property="og:image" content="https://hairlong.ru/assets/images/content/preview.webp">
     <meta property="og:site_name" content="Мастер наращивания волос Виктория">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/uslugi-narashchivaniya-volos.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/social-buttons.css">
+    <link rel="stylesheet" href="assets/css/uslugi-narashchivaniya-volos.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/social-buttons.css">
     <!-- Шрифты -->
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff2" as="font" type="font/woff2"
+          crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff" as="font" type="font/woff"
+          crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2"
+          crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff"
+          crossorigin>
     <!-- Язык сайта -->
     <meta name="language" content="Russian">
     <!-- Автор -->
@@ -94,62 +98,88 @@
         </li>
     </ul>
 </nav>
-<section class="content">
-    <div class="content__title"><h1>Услуги</h1></div>
-    <div class="content__cards">
-        <div class="content__card">
-            <img src="/images/italian_capsule_buildUp.jpg" alt="горячее итальянское наращивание волос"
-                 class="content__card-preview">
-            <div class="content__cards-title">
-                <img src="/images/hairbrush_icon.png" alt="расчёска иконка">
-                <h2>Итальянское наращивание (горячий метод)</h2>
+
+<section class="services">
+    <div class="services__title"><h1>Услуги</h1></div>
+    <div class="services__cards">
+        <!-- Карточка 1 -->
+        <article class="services__card">
+            <img src="assets/images/content/italian_capsule_buildUp.webp" alt="горячее итальянское наращивание волос"
+                 class="services__card-img" loading="lazy">
+            <div class="services__card-header">
+                <img src="assets/images/icons/hairbrush_icon.png" alt="расчёска иконка" class="service-card__icon">
+                <h2 class="service-card__title">Итальянское наращивание (горячий метод)</h2>
             </div>
-            <p>Горячее наращивание по итальянской технологии - это идеальные волосы за несколько часов!</p>
-            <div class="btn_black"><a href="italyanskoe-narashchivanie-goryachiy-metod.html">Подробнее</a></div>
-        </div>
-        <div class="content__card">
-            <img src="/images/service_correction.png" alt="коррекция нарощенных волос" class="content__card-preview">
-            <div class="content__cards-title">
-                <img src="/images/capsule_icon.svg" alt="капсула иконка">
-                <h2>Коррекция нарощенных волос </h2>
+            <div class="services__card-content">
+                <p class="service-card__description">Горячее наращивание по итальянской технологии - это идеальные
+                    волосы за несколько часов!</p>
+                <a href="italyanskoe-narashchivanie-goryachiy-metod.html" class="btn btn--outline">Подробнее</a>
             </div>
-            <p>Коррекция нарощенных волос — обязательная процедура для поддержания идеального объема и аккуратного
-                вида.</p>
-            <div class="btn_black"><a href="korrektsiya-volos.html">Подробнее</a></div>
-        </div>
-        <div class="content__card">
-            <img src="images/service_removal.png" alt="снятие нарощенных волос" class="content__card-preview">
-            <div class="content__cards-title">
-                <div class="content__card-title-icon"><img src="images/curl_icon.svg" alt="локон иконка"></div>
-                <h2>Снятие нарощенных волос</h2>
+        </article>
+        <!-- Карточка 2 -->
+        <article class="services__card">
+            <img src="assets/images/content/service_correction.webp" alt="коррекция нарощенных волос"
+                 class="services__card-img" loading="lazy">
+            <div class="services__card-header">
+                <img src="assets/images/icons/capsule_icon.svg" alt="капсула иконка" class="service-card__icon">
+                <h2 class="service-card__title">Коррекция нарощенных волос</h2>
             </div>
-            <p>Профессиональное снятие нарощенных волос без повреждений.</p>
-            <div class="btn_black"><a href="snyatie-narashchennyh-volos.html">Подробнее</a></div>
+            <div class="services__card-content">
+                <p class="service-card__description">Коррекция нарощенных волос — обязательная процедура для поддержания
+                    идеального объема и аккуратного
+                    вида.</p>
+                <a href="korrektsiya-volos.html" class="btn btn--outline">Подробнее</a>
+            </div>
+        </article>
+        <!-- Карточка 3 -->
+        <article class="services__card">
+            <img src="assets/images/content/service_removal.webp" alt="снятие нарощенных волос"
+                 class="services__card-img" loading="lazy">
+            <div class="services__card-header">
+                <img src="assets/images/icons/curl_icon.svg" alt="локон иконка" class="service-card__icon">
+                <h2 class="service-card__title">Снятие нарощенных волос</h2>
+            </div>
+            <div class="services__card-content">
+                <p class="service-card__description">Профессиональное снятие нарощенных волос без повреждений.</p>
+                <a href="snyatie-narashchennyh-volos.html" class="btn btn--outline">Подробнее</a>
+            </div>
+        </article>
+        <!-- Карточка 4 -->
+        <article class="services__card">
+            <img src="assets/images/content/service_thickening.webp" alt="наращивание для густоты (загущение)"
+                 class="services__card-img" loading="lazy">
+            <div class="services__card-header">
+                <img src="assets/images/icons/moreHair_icon.svg" alt="волосы иконка" class="service-card__icon">
+                <h2 class="service-card__title">Наращивание для густоты (загущение)</h2>
+            </div>
+            <div class="services__card-content">
+                <p class="service-card__description">Быстрый способ добавить объем даже самым редким волосам без вреда
+                    для натуральных волос.</p>
+                <a href="naraschivanie-volos-dlya-obema.html" class="btn btn--outline">Подробнее</a>
+            </div>
+        </article>
+        <!-- Карточка 5 -->
+        <article class="services__card">
+            <img src="assets/images/content/service_training.webp" alt="обучение наращиванию волос"
+                 class="services__card-img" loading="lazy">
+            <div class="services__card-header">
+                <img src="assets/images/icons/cap_icon.svg" alt="степень иконка" class="service-card__icon">
+                <h2 class="service-card__title">Обучение наращиванию волос</h2>
+            </div>
+            <div class="services__card-content">
+                <p class="service-card__description">Практическое обучение для мастеров, желающих освоить востребованную профессию.</p>
+                <a href="obuchenie-narashchivaniyu-volos.html" class="btn btn--outline">Подробнее</a>
+            </div>
+        </article>
+        <div class="wave__container-up">
+            <img src="assets/images/backgrounds/Wave.svg" alt="волны фон" class="wave__divider-up">
         </div>
-        <div class="wave-container">
-            <img src="images/Wave.svg" alt="волны фон" class="wave-divider">
+        <div class="wave__container-middle">
+            <img src="assets/images/backgrounds/Wave.svg" alt="волны фон" class="wave__divider-middle">
         </div>
-         <div class="content__card">
-                    <img src="images/service_thickening.png" alt="наращивание для густоты (загущение)"
-                         class="content__card-preview">
-                    <div class="content__cards-title">
-                        <div class="content__card-title-icon"><img src="images/moreHair_icon.svg" alt="волосы иконка">
-                        </div>
-                        <h2>Наращивание для густоты (загущение)</h2>
-                    </div>
-                    <p>Быстрый способ добавить объем даже самым редким волосам без вреда для натуральных волос.</p>
-                    <div class="btn_black"><a href="naraschivanie-volos-dlya-obema.html">Подробнее</a></div>
-                </div>
-         <div class="content__card">
-                    <img src="images/service_training.png" alt="обучение наращиванию волос"
-                         class="content__card-preview">
-                    <div class="content__cards-title">
-                        <div class="content__card-title-icon"><img src="images/cap_icon.svg" alt="степень иконка"></div>
-                        <h2>Обучение наращиванию волос</h2>
-                    </div>
-                    <p>Практическое обучение для мастеров, желающих освоить востребованную профессию.</p>
-                    <div class="btn_black"><a href="obuchenie-narashchivaniyu-volos.html">Подробнее</a></div>
-                </div>
+        <div class="wave__container-bottom">
+            <img src="assets/images/backgrounds/Wave.svg" alt="волны фон" class="wave__divider-bottom">
+        </div>
     </div>
 </section>
 
@@ -157,8 +187,8 @@
     <div class="loading-spinner"></div>
 </div>
 
-<script src="/js/footer-loader.js" defer></script>
-<script src="/js/menu-loader.js" defer></script>
-<script src="/js/social-buttons.js" defer></script>
+<script src="assets/js/modules/footer-loader.js" defer></script>
+<script src="assets/js/modules/menu-loader.js" defer></script>
+<script src="assets/js/modules/social-buttons.js" defer></script>
 </body>
 </html>

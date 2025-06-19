@@ -21,18 +21,18 @@
           content="Итальянское и горячее наращивание, коррекция, снятие и обучение. Длина. Густота. Совершенство.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hairlong.ru//snyatie-narashchennyh-volos.html">
-    <meta property="og:image" content="https://hairlong.ru/images/preview.jpg">
+    <meta property="og:image" content="https://hairlong.ru/images/preview.webp">
     <meta property="og:site_name" content="Мастер наращивания волос Виктория">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/snyatie-narashchennyh-volos.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/social-buttons.css">
+    <link rel="stylesheet" href="assets/css/services-common.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/social-buttons.css">
     <!-- Шрифты -->
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff" crossorigin>
     <!-- Язык сайта -->
     <meta name="language" content="Russian">
     <!-- Автор -->
@@ -55,7 +55,7 @@
                     "streetAddress": "район Нахичевань"
                 },
                 "telephone": "+7 (991) 367-65-65",
-                "image": "/images/Logo_Gold_vector.svg"
+                "image": "assets/images/logos/Logo_Gold_vector.svg"
             },
             "description": "Профессиональное снятие нарощенных волос без повреждений натуральных волос. Безболезненная процедура с использованием качественных материалов.",
             "areaServed": {
@@ -104,7 +104,7 @@
     <div class="loading-spinner"></div>
 </div>
 
-<nav class="breadcrumbs" aria-label="Навигация по разделам">
+<nav class="breadcrumbs container" aria-label="Навигация по разделам">
     <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
             <a href="index.html" class="breadcrumbs__link">Главная</a>
@@ -117,48 +117,67 @@
         </li>
     </ul>
 </nav>
-<section class="content">
-    <div class="content__title"><h1>Профессиональное снятие нарощенных волос без повреждений</h1></div>
-    <div class="wave-background">
-        <img src="images/Wave_up.svg" alt="волны наверху" class="wave-up">
-        <img src="images/Wave_bottom.svg" alt="волны внизу" class="wave-bottom">
-    </div>
-    <div class="content__info">
-        <img src="images/removal.png" alt="снятие нарощенных волос"
-             class="content__info-pic">
-        <div class="content__info-text">
-            <p class="content__info-text-p">Снятие нарощенных волос требует особой аккуратности, чтобы сохранить ваши
-                натуральные волосы здоровыми. При проведении процедуры используются профессиональные составы и
-                инструменты, которые растворяют капсулы без травмирования волосяных луковиц. Результат — густые,
-                блестящие волосы без ломкости.</p>
-            <h2>Почему важно снимать у опытного мастера?</h2>
-            <ul class="content__info-list-item">
-                <li><b class="bold">Безопасность:</b> Специальные составы мягко растворяют клей, не повреждая натуральные волосы.</li>
-                <li><b class="bold">Сохранение объема:</b> Исключается вырывание собственных волос.</li>
-                <li><b class="bold">Без покраснения и зуда:</b> Используются профессиональные растворы, которые не травмируют кожу головы.</li>
-                <li><b class="bold">Экономия времени:</b> Процедура занимает всего <b class="bold">1–1.5 часа</b>.</li>
-            </ul>
-            <div class="content__info-text-price">
-                <div><h2>Стоимость:</h2></div>
-                <ul>
-                    <li>Снятие капсульного наращивания:  000 ₽</li>
-                    <li>Снятие ленточного наращивания: 000 ₽</li>
-                    <li>Перекапсуляция натуральных волос:  000 ₽</li>
-                </ul>
-            </div>
+
+<main class="service container">
+    <h1 class="service__title" data-admin-text="title">Профессиональное снятие нарощенных волос без повреждений</h1>
+
+    <article class="service__content">
+        <div class="service__image-container" data-admin-image="main">
+            <img src="assets/images/content/removal.webp"
+                 alt="Процесс снятия нарощенных волос у мастера"
+                 class="service__image">
         </div>
-    </div>
-    <div class="content__info-text-sale"><img src="images/fire_icon.png" alt="">
-        <p>Акция: При записи онлайн — скидка 10% на работу мастера!</p>
-    </div>
-</section>
+
+        <div class="service__info-group">
+            <div class="service__info">
+                <p class="service__description" data-admin-text="description">
+                    Снятие нарощенных волос требует особой аккуратности для сохранения здоровья ваших натуральных волос.
+                    Мы используем профессиональные составы, которые мягко растворяют капсулы, не повреждая волосяные
+                    луковицы и кожу головы. Результат - сохранение объема и блеска ваших собственных волос.
+                </p>
+            </div>
+
+            <section class="service__pricing" data-admin-text="pricing">
+                <h2 class="service__subtitle">Стоимость:</h2>
+                <ul class="pricing__list">
+                    <li class="pricing__item">Снятие капсульного наращивания: 1500 ₽</li>
+                    <li class="pricing__item">Снятие ленточного наращивания: 1800 ₽</li>
+                    <li class="pricing__item">Комплексное снятие + уход: 2500 ₽</li>
+                </ul>
+
+                <div class="service__promo" data-admin-text="promo">
+                    <img src="assets/images/icons/fire_icon.png" alt="Акция" class="fire-icon">
+                    <p>При записи онлайн — скидка 10% на все виды снятия!</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="service__features" data-admin-text="features">
+            <h2 class="service__subtitle">Преимущества профессионального снятия</h2>
+            <ul class="features__list">
+                <li class="features__item" data-admin-text="feature1">
+                    Безопасность - специальные составы не повреждают натуральные волосы
+                </li>
+                <li class="features__item" data-admin-text="feature2">
+                    Сохранение объема - исключается вырывание собственных волос
+                </li>
+                <li class="features__item" data-admin-text="feature3">
+                    Отсутствие раздражения - мягкие растворы не травмируют кожу головы
+                </li>
+                <li class="features__item" data-admin-text="feature4">
+                    Экономия времени - процедура занимает всего 1-1.5 часа
+                </li>
+            </ul>
+        </section>
+    </article>
+</main>
 
 <div id="footer-container">
     <div class="loading-spinner"></div>
 </div>
 
-<script src="/js/footer-loader.js" defer></script>
-<script src="/js/menu-loader.js" defer></script>
-<script src="/js/social-buttons.js" defer></script>
+<script src="assets/js/modules/footer-loader.js" defer></script>
+<script src="assets/js/modules/menu-loader.js" defer></script>
+<script src="assets/js/modules/social-buttons.js" defer></script>
 </body>
 </html>

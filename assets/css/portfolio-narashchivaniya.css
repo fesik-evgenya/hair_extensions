@@ -1,0 +1,531 @@
+/* ==================== ШРИФТЫ ==================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat/Montserrat-Thin.woff2') format('woff2'),
+    url('assets/fonts/Montserrat/Montserrat-Thin.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== БАЗОВЫЕ СТИЛИ ==================== */
+:root {
+    --accent-color: #eebcb4;
+    --dark-bg: #2c3e50;
+    --text-light: #ffffff;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #000000;
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.4;
+}
+
+b {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .case-card:hover {
+        transform: none;
+        border-color: rgba(192, 160, 64, 0.3);
+        box-shadow: 0 4px 15px rgba(192, 160, 64, 0.1);
+    }
+
+    .case-card:hover .case-card__frame {
+        transform: none;
+        border-color: rgba(255, 255, 255, 0.1);
+        animation: none;
+        filter: none;
+    }
+
+    .case-card:hover .case-card__image--after {
+        opacity: 0;
+    }
+}
+
+/* ==================== ГЛАВНЫЙ ЗАГОЛОВОК ==================== */
+.hero-section {
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 85px auto 0;
+    padding: 8px 0;
+}
+
+.hero-section__title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    text-align: center;
+    color: #C0A040;
+    animation: fadeIn 1s ease;
+}
+
+
+.hero-section__subtitle {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: normal;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ==================== ВОЛНЫ НА ФОНЕ ==================== */
+.wave-up {
+    position: absolute;
+    width: 100%;
+    max-width: 1200px;
+    height: 167px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 160px;
+    filter: drop-shadow(0 4px 12px #B8A12E);
+}
+
+.wave-middle {
+    position: absolute;
+    width: 100%;
+    max-width: 1200px;
+    height: 154px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 712px;
+    opacity: 0.7;
+    filter: drop-shadow(0 4px 15px #B8A12E);
+}
+
+.wave-bottom {
+    position: absolute;
+    width: 100%;
+    max-width: 1200px;
+    height: 154px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1350px;
+    opacity: 0.7;
+    filter: drop-shadow(0px 4px 15px #B8A12E);
+}
+
+/* Галерея кейсов */
+.cases-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.case-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.80s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 15px rgba(192, 160, 64, 0.1);
+    padding: 15px;
+    border: 1px solid rgba(192, 160, 64, 0.3);
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    max-width: 300px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    border-color: #C0A040;
+    box-shadow: 0 15px 30px rgba(192, 160, 64, 0.3); /* Усилена тень при наведении */
+}
+
+.case-card__image-container {
+    position: relative;
+    height: 400px;
+}
+
+.case-card__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: opacity 0.5s ease;
+}
+
+.case-card__image--after {
+    opacity: 0;
+}
+
+.case-card:hover .case-card__image--after {
+    opacity: 1;
+}
+
+.case-card__title {
+    font-size: 18px;
+    color: #C0A040;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.case-card__description {
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.case-card__method {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border: 2px solid #C0A040;
+    color: #C0A040;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Стили для рамки */
+.case-card__frame {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    pointer-events: none;
+    will-change: transform, box-shadow, filter;
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    filter 0.3s ease;
+}
+
+.case-card__frame::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+            45deg,
+            rgba(192, 160, 64, 0) 0%,
+            rgba(192, 160, 64, 0.2) 50%,
+            rgba(192, 160, 64, 0) 100%
+    );
+    z-index: -1;
+    border-radius: 8px;
+}
+
+
+/* Эффекты при наведении */
+.case-card:hover .case-card__frame {
+    transform: scale(0.8);
+    border-color: rgba(192, 160, 64, 0.4);
+    animation: gold-glow 2s ease-in-out infinite,
+               complex-glow 3s ease-in-out infinite;
+    filter: brightness(1.1);
+    transition: transform 0.3s ease,
+    border-color 0.3s ease,
+    filter 0.3s ease;
+}
+
+
+/* Фильтры */
+.filters-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.filters-nav__btn {
+    padding: 10px 25px;
+    border: 2px solid #C0A040;
+    border-radius: 25px;
+    color: #C0A040;
+    background: black;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.filters-nav__btn--active {
+    background: #C0A040;
+    color: #0a0a0a;
+}
+
+/* CTA секция */
+.cta-section {
+    color: #e0e0e0;
+    margin: 15px 30px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* ==================== АНИМАЦИИ ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация свечения */
+@keyframes gold-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(192, 160, 64, 0.3),
+        0 0 20px rgba(192, 160, 64, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(192, 160, 64, 0.6),
+        0 0 40px rgba(192, 160, 64, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(192, 160, 64, 0.3),
+        0 0 20px rgba(192, 160, 64, 0.2);
+    }
+}
+
+@keyframes complex-glow {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(192, 160, 64, 0.3));
+        opacity: 0.5;
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(192, 160, 64, 0.7));
+        opacity: 1;
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(192, 160, 64, 0.3));
+        opacity: 0.5;
+    }
+}
+
+/* ==================== АДАПТИВ ==================== */
+/* 1024px - Ноутбуки */
+@media (max-width: 1024px) {
+    .hero-section__title {
+        font-size: 2.5rem;
+    }
+
+    .cases-gallery {
+        gap: 1.5rem;
+        padding: 0 20px;
+    }
+
+    .case-card {
+        max-width: 100%;
+    }
+
+    .wave-up {
+        top: 140px;
+    }
+}
+
+/* 768px - Планшеты и крупные мобильные */
+@media (max-width: 768px) {
+    .hero-section {
+        margin-top: 70px;
+        padding: 20px 0;
+    }
+
+    .hero-section__title {
+        font-size: 2.2rem;
+    }
+
+    .hero-section__subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Вертикальные фильтры */
+    .filters-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    .filters-nav__btn {
+        width: 80%;
+        max-width: 300px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .cases-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+        padding: 0 15px;
+        max-width: 720px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .case-card {
+        min-height: 420px;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .case-card__image-container {
+        height: 350px;
+    }
+
+    .wave-up,
+    .wave-middle,
+    .wave-bottom {
+        display: none;
+    }
+}
+
+/* 600px - Средние мобильные */
+@media (max-width: 600px) {
+    .hero-section__title {
+        font-size: 2rem;
+    }
+
+    .hero-section__subtitle {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .filters-nav__btn {
+        width: 90%;
+    }
+
+    .cases-gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 500px;
+        padding: 0 15px;
+    }
+
+    .case-card {
+        min-height: 400px;
+        padding: 12px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .case-card__image-container {
+        height: 350px;
+    }
+}
+
+/* 480px - Мелкие мобильные */
+@media (max-width: 480px) {
+    .hero-section__title {
+        font-size: 1.8rem;
+    }
+
+    .hero-section__subtitle {
+        font-size: 0.95rem;
+    }
+
+    .filters-nav__btn {
+        font-size: 0.9rem;
+    }
+
+    .case-card {
+        min-height: 380px;
+        padding: 10px;
+    }
+
+    .case-card__image-container {
+        height: 320px;
+    }
+
+    .case-card__title {
+        font-size: 16px;
+    }
+
+    .case-card__description {
+        font-size: 13px;
+    }
+}
+
+/* 350px - Маленькие мобильные */
+@media (max-width: 350px) {
+    .hero-section {
+        margin-top: 60px;
+    }
+
+    .hero-section__title {
+        font-size: 1.6rem;
+    }
+
+    .hero-section__subtitle {
+        font-size: 0.9rem;
+    }
+
+    .case-card {
+        min-height: 340px;
+        padding: 8px;
+    }
+
+    .case-card__image-container {
+        height: 280px;
+    }
+
+    .filters-nav__btn {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .case-card .case-card__image--after {
+        transition: opacity 0.9s ease;
+    }
+}

@@ -19,18 +19,21 @@
           content="Профессиональное наращивание волос в Ростове-на-Дону. Капсульное, горячее, итальянское. Фото до/после, отзывы, доступные цены.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hairlong.ru">
-    <meta property="og:image" content="https://hairlong.ru/images/preview.jpg">
+    <meta property="og:image" content="https://hairlong.ru/assets/images/content/preview.webp">
     <meta property="og:site_name" content="Виктория — мастер по наращиванию волос">
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/social-buttons.css">
+    <link rel="preload" href="assets/css/style.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components/header.css">
+    <link rel="stylesheet" href="assets/css/components/footer.css">
+    <link rel="stylesheet" href="assets/css/components/social-buttons.css">
     <!-- Шрифты -->
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Montserrat/Montserrat-VariableFont_wght.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/Montserrat/Montserrat-Thin.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2"
+          crossorigin>
+    <link rel="preload" href="assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff" as="font" type="font/woff"
+          crossorigin>
     <!-- Язык сайта -->
     <meta name="language" content="Russian">
     <!-- Автор -->
@@ -49,9 +52,9 @@
         <!-- Слоган-триада -->
         <div class="hero__slogan">
             <h1 class="hero__slogan-line">
-                <span class="hero__slogan-word">Длина.</span>
-                <span class="hero__slogan-word">Густота.</span>
-                <span class="hero__slogan-word">Совершенство.</span>
+                <span class="hero__slogan-item">Длина.</span>
+                <span class="hero__slogan-item">Густота.</span>
+                <span class="hero__slogan-item">Совершенство.</span>
             </h1>
         </div>
 
@@ -59,128 +62,158 @@
         <div class="hero__text-group">
             <h2 class="hero__title">Ваша новая роскошь<br>за <span class="hero__highlight">3 часа</span></h2>
             <p class="hero__subtitle">
-                <span class="hero__guarantee-badge">Гарантия 4 недели</span>
+                <span class="hero__guarantee-badge">Гарантия на работу</span>
                 <span class="hero__guarantee-badge">98% клиентов возвращаются снова</span>
             </p>
         </div>
     </div>
-    <img src="/images/Hero_block-pic.svg" alt="Наращивание волос" class="hero__pic">
+    <img src="assets/images/content/hero_block.webp" alt="Наращивание волос" class="hero__pic"
+         width="1200" height="900" loading="lazy"
+         srcset="assets/images/content/hero_block-small.webp 480w,
+                     assets/images/content/hero_block-medium.webp 768w,
+                     assets/images/content/hero_block.webp 1200w"
+         sizes="(max-width: 480px) 100vw, (max-width: 1024px) 80vw, 1200px">
 </section>
 
-<section class="waves">
-    <div class="img-wave"><img src="/images/Wave_up.svg" alt="золотые волны нарощенных волос" class="img-wave"></div>
-    <div class="advantages">
-        <div class="waves_advantages-title"><h2>ПРЕИМУЩЕСТВА</h2></div>
-        <div class="waves_advantages-items">
-            <div class="waves_advantages-items-hair">
-                <div><img src="/images/hair_icon.png" alt="качественное наращивание"
-                          class="waves_advantages-items-hair-pic"></div>
-                <div><p class="waves_advantages-items-hair-lettering">100%<br>качественные<br>пряди</p></div>
+<section class="advantages editable-section" data-section="advantages">
+
+    <div class="img-wave">
+        <img src="assets/images/backgrounds/Wave_up.svg" alt="золотые волны нарощенных волос" class="img-wave"
+             role="presentation" width="1250" height="120" loading="lazy">
+    </div>
+
+    <h2 class="advantages__title">ПРЕИМУЩЕСТВА</h2>
+    <div class="advantages__list">
+        <div class="advantages__item">
+            <div class="advantages__icon-container">
+                <img src="assets/images/icons/hair_icon.png" alt="качественные пряди" class="advantages__icon"
+                     loading="lazy">
+                <p class="advantages__text">качественные<br>пряди</p>
             </div>
-            <div class="waves_advantages-items-protected4">
-                <div><img src="/images/protected4_icon.svg" alt="гарантия качества"
-                          class="waves_advantages-items-protected4-pic"></div>
-                <div><p class="waves_advantages-items-protected4-lettering">Гарантия<br>4 недели</p></div>
+        </div>
+        <div class="advantages__item">
+            <div class="advantages__icon-container">
+                <img src="assets/images/icons/protected_icon.svg" alt="Гарантия" class="advantages__icon"
+                     loading="lazy">
+                <p class="advantages__text">Гарантия<br>на работу</p>
             </div>
-            <div class="waves_advantages-items-pill">
-                <div><img src="/images/pill_icon.svg" alt="наращивание без аллергии"
-                          class="waves_advantages-items-pill-pic"></div>
-                <div><p class="waves_advantages-items-pill-lettering">Без<br>аллергии</p></div>
+        </div>
+        <div class="advantages__item">
+            <div class="advantages__icon-container">
+                <img src="assets/images/icons/pill_icon.svg" alt="Без аллергии" class="advantages__icon" loading="lazy">
+                <p class="advantages__text">Без<br>аллергии</p>
             </div>
         </div>
     </div>
-    <div class="popularServices">
-        <div class="waves_popularServices-title"><h2>ПОПУЛЯРНЫЕ УСЛУГИ</h2></div>
-        <div class="waves_popularServices-cards">
-            <a href="italyanskoe-narashchivanie-goryachiy-metod.html" class="waves_popularServices-card">
-                <div><img src="/images/italian_capsule_buildUp.jpg" alt="итальянское капсульное наращивание"
-                          class="waves_popularServices-card-pic"></div>
-                <div class="waves_popularServices-card-content"><h3 class="waves_popularServices-card-lettering">
-                    Итальянское<br>наращивание</h3></div>
-            </a>
-            <a href=korrektsiya-volos.html class="waves_popularServices-card">
-                <div class="waves_popularServices-card-content"><img src="/images/italian_capsule_correction.png"
-                                                                     alt="коррекция нарощенных волос"
-                                                                     class="waves_popularServices-card-pic"></div>
-                <div class="waves_popularServices-card-content"><h3 class="waves_popularServices-card-lettering">
-                    Коррекция</h3></div>
-            </a>
-            <a href="naraschivanie-volos-dlya-obema.html" class="waves_popularServices-card">
-                <div><img src="/images/italian_capsule_thickening.jpg" alt="загущение нарощенными волосами"
-                          class="waves_popularServices-card-pic"></div>
-                <div class="waves_popularServices-card-content"><h3 class="waves_popularServices-card-lettering">
-                    Загущение</h3></div>
-            </a>
-        </div>
+</section>
+
+<section class="services editable-section" data-section="services">
+    <h2 class="services__title">ПОПУЛЯРНЫЕ УСЛУГИ</h2>
+    <div class="services__list">
+        <a href="italyanskoe-narashchivanie-goryachiy-metod.html" class="services__card">
+            <div class="services__card-img-container">
+                <img src="assets/images/content/italian_capsule_buildUp.webp"
+                     alt="итальянское капсульное наращивание"
+                     width="300" height="300" loading="lazy"
+                     srcset="assets/images/content/italian_capsule_buildUp-small.webp 300w,
+                             assets/images/content/italian_capsule_buildUp.webp 600w"
+                     sizes="(max-width: 768px) 90vw, 300px">
+            </div>
+            <h3 class="services__card-title">Итальянское<br>наращивание</h3>
+        </a>
+        <a href="korrektsiya-volos.html" class="services__card">
+            <div class="services__card-img-container">
+                <img src="assets/images/content/italian_capsule_correction.webp" alt="коррекция нарощенных волос"
+                     width="300" height="300" loading="lazy"
+                     srcset="assets/images/content/italian_capsule_correction-small.webp 300w,
+                             assets/images/content/italian_capsule_correction.webp 600w"
+                     sizes="(max-width: 768px) 90vw, 300px">
+            </div>
+            <h3 class="services__card-title">Коррекция</h3>
+        </a>
+        <a href="naraschivanie-volos-dlya-obema.html" class="services__card">
+            <div class="services__card-img-container">
+                <img src="assets/images/content/italian_capsule_thickening.webp" alt="загущение волос"
+                     width="300" height="300" loading="lazy"
+                     srcset="assets/images/content/italian_capsule_thickening-small.webp 300w,
+                             assets/images/content/italian_capsule_thickening.webp 600w"
+                     sizes="(max-width: 768px) 90vw, 300px">
+            </div>
+            <h3 class="services__card-title">Загущение</h3>
+        </a>
     </div>
-    <div class="img-wave"><img src="/images/Wave_bottom.svg" alt="золотые волны нарощенных волос" class="img-wave">
+
+    <div class="img-wave">
+        <img src="assets/images/backgrounds/Wave_bottom.svg" alt="золотые волны нарощенных волос" class="img-wave"
+             role="presentation" width="1250" height="120" loading="lazy">
     </div>
-    <div class="reviews">
-        <div class="waves_reviews-title"><h2>ОТЗЫВЫ</h2></div>
-        <div class="waves_reviews-hashtags">
-            <span class="waves_reviews-hashtag">#LongHairMagic</span>
-            <span class="waves_reviews-hashtag">#НаращиваниеОтПрофи</span>
-        </div>
-        <div class="waves_reviews-cards" id="reviews">
-            <div class="waves_reviews-card">
-                <div class="waves_reviews-card-contact">
-                    <div class="waves_reviews-card-avatar"><img src="images/avatars/1.jpg"
-                                                                alt="отзыв довольного клиента">
-                    </div>
-                    <div class="waves_reviews-card-title">
-                        <span class="waves_reviews-card-title-stars">★★★★★</span>
-                        <span class="waves_reviews-card-title-name">Кристина</span>
+</section>
+
+<section class="reviews editable-section" data-section="reviews">
+    <h2 class="reviews__title">>ОТЗЫВЫ</h2>
+    <div class="reviews__hashtags">
+        <span>#LongHairMagic</span>
+        <span>#НаращиваниеОтПрофи</span>
+    </div>
+    <div class="reviews__list" id="reviews">
+            <div class="reviews__card">
+                <div class="reviews__card-header">
+                    <img src="assets/images/content/avatars/1.webp" alt="отзыв довольного клиента"
+                         class="reviews__avatar"
+                         width="80" height="80" loading="lazy">
+                    <div class="reviews__info">
+                        <div class="reviews__stars">★★★★★</div>
+                        <div class="reviews__name">Кристина</div>
                     </div>
                 </div>
-                <p class="waves_reviews-card-info">Мне нужно было загущение височной зоны. Мастер идеально
+                <p class="reviews__text">Мне нужно было загущение височной зоны. Мастер идеально
                     нарастила и не отличишь от своих. Я в полном восторге. Цена, волосы - всё соответствовала
                     заявленному в разговоре. Теперь постоянно буду обращаться к Виктории.<br><br>Спасибо за
                     красоту 🌹</p>
             </div>
-            <div class="waves_reviews-card">
-                <div class="waves_reviews-card-contact">
-                    <div class="waves_reviews-card-avatar"><img src="/images/avatars/2.jpg"
-                                                                alt="отзыв довольного клиента">
-                    </div>
-                    <div class="waves_reviews-card-title">
-                        <span class="waves_reviews-card-title-stars">★★★★★</span>
-                        <span class="waves_reviews-card-title-name">Анастасия</span>
+            <div class="reviews__card">
+                <div class="reviews__card-header">
+                    <img src="assets/images/content/avatars/2.webp" alt="отзыв довольного клиента"
+                         class="reviews__avatar"
+                         width="80" height="80" loading="lazy">
+                    <div class="reviews__info">
+                        <div class="reviews__stars">★★★★★</div>
+                        <div class="reviews__name">Анастасия</div>
                     </div>
                 </div>
-                <p class="waves_reviews-card-info">Шикарная работа, очень приятный мастер, аккуратно и очень
+                <p class="reviews__text">Шикарная работа, очень приятный мастер, аккуратно и очень
                     качественно выполнила наращивание волос, я в восторге 😍😍 волосы подобраны очень качественные
                     и мягкие, все рекомендации дала по уходу, спасибо 💋💋</p>
             </div>
-            <div class="waves_reviews-card">
-                <div class="waves_reviews-card-contact">
-                    <div class="waves_reviews-card-avatar"><img src="images/avatars/3.jpg"
-                                                                alt="отзыв довольного клиента">
-                    </div>
-                    <div class="waves_reviews-card-title">
-                        <span class="waves_reviews-card-title-stars">★★★★★</span>
-                        <span class="waves_reviews-card-title-name">Жанна</span>
+            <div class="reviews__card">
+                <div class="reviews__card-header">
+                    <img src="assets/images/content/avatars/3.webp" alt="отзыв довольного клиента"
+                         class="reviews__avatar"
+                         width="80" height="80" loading="lazy">
+                    <div class="reviews__info">
+                        <div class="reviews__stars">★★★★★</div>
+                        <div class="reviews__name">Жанна</div>
                     </div>
                 </div>
-                <p class="waves_reviews-card-info">Замечательная и милая девушка. Волосы нарастила быстро и
+                <p class="reviews__text">Замечательная и милая девушка. Волосы нарастила быстро и
                     качественно, рассказала про все рекомендации по уходу, приятная в общении, я в
-                    восторге🥰<br><br>100% вернусь еще</p>
+                    восторге🥰<br>100% вернусь еще</p>
             </div>
-            <div class="waves_reviews-card">
-                <div class="waves_reviews-card-contact">
-                    <div class="waves_reviews-card-avatar"><img src="images/avatars/4.jpg"
-                                                                alt="отзыв довольного клиента">
-                    </div>
-                    <div class="waves_reviews-card-title">
-                        <span class="waves_reviews-card-title-stars">★★★★★</span>
-                        <span class="waves_reviews-card-title-name">Кристина</span>
+            <div class="reviews__card">
+                <div class="reviews__card-header">
+                    <img src="assets/images/content/avatars/4.webp" alt="отзыв довольного клиента"
+                         class="reviews__avatar"
+                         width="80" height="80" loading="lazy">
+                    <div class="reviews__info">
+                        <div class="reviews__stars">★★★★★</div>
+                        <div class="reviews__name">Кристина</div>
                     </div>
                 </div>
-                <p class="waves_reviews-card-info">Я в восторге, прекрасная девушка, работает изумительно, все так
+                <p class="reviews__text">Я в восторге, прекрасная девушка, работает изумительно, все так
                     ровненько и красиво, поставила пряди как я и хотела близко к лицу, но при этом капсул
                     вообще не видно, очень комфортно ничего не тянет, 10 из 10! Буду ещё обращаться к ней, очень
                     мне понравилась и всем знакомым посоветую ! Прелесть🌸🌸🌸🔥💕</p>
             </div>
-        </div>
     </div>
 </section>
 
@@ -188,9 +221,8 @@
     <div class="loading-spinner"></div>
 </div>
 
-<script src="/js/social-buttons.js" defer></script>
-<script src="/js/menu-loader.js" defer></script>
-<script src="/js/footer-loader.js" defer></script>
-
+<script src="assets/js/modules/footer-loader.js" defer></script>
+<script src="assets/js/modules/menu-loader.js" defer></script>
+<script src="assets/js/modules/social-buttons.js" defer></script>
 </body>
 </html>

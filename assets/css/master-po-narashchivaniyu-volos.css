@@ -1,0 +1,306 @@
+/* ==================== ШРИФТЫ ==================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat/Montserrat-Thin.woff2') format('woff2'),
+    url('assets/fonts/Montserrat/Montserrat-Thin.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('assets/fonts/Playfair_Display/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== БАЗОВЫЕ СТИЛИ ==================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: #E0E0E0;
+    margin: 0;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== ОСНОВНЫЕ СТИЛИ ==================== */
+.master {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+}
+
+.master__profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.master__photo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.master__title {
+    font-size: 2.4rem;
+    color: #C0A040;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.master__subtitle {
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 10px;
+    color: #e0e0e0;
+    font-weight: 300;
+}
+
+.master__intro {
+    margin: 25px 0 35px;
+}
+
+.master__intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 25px;
+    font-weight: 300;
+}
+
+.master__intro p::before {
+    content: "•";
+    color: #C0A040;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+}
+
+.master__excellence {
+    margin-top: 40px;
+}
+
+.master__excellence-title {
+    font-size: 1.8rem;
+    color: #C0A040;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.master__excellence-list {
+    list-style: none;
+}
+
+.master__excellence-item {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    font-weight: 300;
+}
+
+.master__excellence-item::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #C0A040;
+    font-size: 1.2rem;
+}
+
+/* Философия */
+.master__philosophy {
+    background: linear-gradient(to right, #0a0a0a, #111);
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.master__philosophy-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #C0A040;
+    margin-bottom: 40px;
+    font-weight: 400;
+    position: relative;
+}
+
+.master__philosophy-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #C0A040;
+}
+
+.master__philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.master__philosophy-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s;
+}
+
+.master__philosophy-card:hover {
+    transform: translateY(-5px);
+}
+
+.master__philosophy-card h3 {
+    color: #C0A040;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+/* Отзывы */
+.master__testimonials {
+    margin-top: 20px;
+}
+
+.master__testimonials-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #C0A040;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.master__testimonial-item {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-left: 3px solid #C0A040;
+}
+
+.master__testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.master__testimonial-author {
+    color: #C0A040;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ==================== АДАПТИВ ==================== */
+@media (max-width: 1024px) {
+    .master__profile {
+        gap: 20px;
+    }
+
+    .master__title {
+        font-size: 2rem;
+        line-height: 60%;
+    }
+}
+
+@media (max-width: 850px) {
+    .master__excellence {
+        margin-top: 20px;
+        transform: translateX(-30%);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .master__profile {
+        grid-template-columns: 1fr;
+    }
+
+    .master__photo {
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .master__philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .master__title {
+        font-size: 1.8rem;
+        text-align: center;
+        line-height: 60%;
+        margin-top: -6%;
+    }
+
+    .master__excellence {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .master {
+        margin-top: 60px;
+        padding: 0 15px;
+    }
+
+    .master__title {
+        font-size: 1.6rem;
+    }
+
+    .master__philosophy-title,
+    .master__testimonials-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .master__intro p {
+        padding-left: 20px;
+        font-size: 1rem;
+    }
+
+    .master__philosophy-card {
+        padding: 20px;
+    }
+
+    .master__testimonial-item {
+        padding: 20px;
+    }
+}
